@@ -1,0 +1,20 @@
+{
+  "name": "ts-roadMap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maxinth/ts-road-map.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maxinth/ts-road-map/issues"
+  },
+  "homepage": "https://github.com/Maxinth/ts-road-map#readme"
+}
