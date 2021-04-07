@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es5",
     "outDir": "./dist",
     "rootDir": "./src",
     "noEmitOnError": true,
-    "watch": true
+    "watch": true,
+    "lib": ["es5", "dom", "es2015.collection"]
   }
 }
