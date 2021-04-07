@@ -1,8 +1,8 @@
-var printMessage = function (msg) { return console.log("Message: " + msg); };
-var message = "Hello, TypeScript";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const calc_1 = require("./calc");
+let printMessage = (msg) => console.log(`Message: ${msg}`);
+let message = "Hello, TypeScript";
 printMessage(message);
-/* 🔥 - checking if a new feature gets transpiled down into older js code */
-var data = new Map();
-data.set("Bob", "London");
-data.set("Alice", "Paris");
-data.forEach(function (val, key) { return console.log(key + " lives in " + val); });
+let total = calc_1.sum(100, 200, 300);
+console.log(`Total: ${total}`);
