@@ -1,5 +1,5 @@
 "use strict";
-function getFinalPrice(price, discount) {
-    return price - price / discount;
+function printMessage(msg) {
+    console.log(`Message: ${msg}`);
 }
-console.log(getFinalPrice(100, 5));
+printMessage("Hello, TypeScript");

@@ -1,5 +1,5 @@
-function getFinalPrice(price: number, discount: number) {
-  return price - price / discount;
+function printMessage(msg: string): void {
+  console.log(`Message: ${msg}`);
 }
 
-console.log(getFinalPrice(100, 5));
+printMessage("Hello, TypeScript");
