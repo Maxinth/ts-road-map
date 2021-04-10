@@ -1,25 +1,10 @@
-// // Asserting a non-null value
+/* Using Functions */
 
-function calculateTax(amount: number, format: boolean): string | number | null {
-  if (amount === 0) {
-    return null;
-  }
-  const calcAmount = amount * 1.2;
-  return format ? `$${calcAmount.toFixed(2)} ` : calcAmount;
+function calculateTax(amount: number, discount?: number): number {
+  return amount * 1.2 - (discount || 0);
 }
 
-let taxValue!: string | number | null;
-eval("taxValue = calculateTax(100,false)");
-
-if (taxValue !== null) {
-  switch (typeof taxValue) {
-    case "number":
-      console.log(`Number Value: ${taxValue.toFixed(2)}`);
-      break;
-    case "string":
-      console.log(`String Value: ${taxValue.charAt(0)}`);
-      break;
-  }
-} else {
-  console.log("Value is not a string or a number");
-}
+let taxValue = calculateTax(100, 0);
+console.log(`2 args: ${taxValue}`);
+taxValue = calculateTax(100);
+console.log(`1 arg: ${taxValue}`);
