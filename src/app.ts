@@ -5,17 +5,38 @@ function calculateTax(amount: number, format: boolean): string | number {
   return format ? `$${calcAmount.toFixed(2)} ` : calcAmount;
 }
 
-let taxNumber: number = calculateTax(500, false) as number;
-let taxString: string = calculateTax(100, true) as string;
+// let taxNumber: number = calculateTax(500, false) as number;
 
+// assertion alternative syntax
+// let taxString = <string>calculateTax(100, true);
+// alternatively
+// let taxString = calculateTax(100, true) as string;
+
+// console.log(`Number Value: ${taxNumber.toFixed(2)}`);
+// console.log(`String Value: ${taxString.charAt(0)}`);
+
+let taxValue = calculateTax(100, false);
+
+// using a type guard - initial implementation using if-else block.
 /*
-the boolean type specified in taxBoolean doesn't exist in the types calculateTax returns
-(string | number), however it can be asserted on the the value of calculateTax by first 
-asserting to it as any and then as boolean
+
+if (typeof taxValue === "number") {
+  console.log(`Number Value: ${taxValue.toFixed(2)}`);
+} else if (typeof taxValue === "string") {
+  console.log(`String Value: ${taxValue.charAt(0)}`);
+}
 
 */
-let taxBoolean: boolean = (calculateTax(100, false) as any) as boolean;
 
-console.log(`Number Value: ${taxNumber.toFixed(2)}`);
-console.log(`String Value: ${taxString.charAt(0)}`);
-console.log("taxBoolean = ", taxBoolean);
+// type guarding in a switch statement.
+switch (typeof taxValue) {
+  case "number":
+    console.log(`Number Value: ${taxValue.toFixed(2)}`);
+    break;
+  case "string":
+    console.log(`String Value: ${taxValue.charAt(0)}`);
+    break;
+  default:
+    let value: never = taxValue;
+    console.log(`Unexpected type for value : ${value}`);
+}
