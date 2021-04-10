@@ -1,4 +1,4 @@
-// // Asserting a non-null value
+// removing null from a type guard
 function calculateTax(amount, format) {
     if (amount === 0) {
         return null;
@@ -6,8 +6,7 @@ function calculateTax(amount, format) {
     const calcAmount = amount * 1.2;
     return format ? `$${calcAmount.toFixed(2)} ` : calcAmount;
 }
-let taxValue;
-eval("taxValue = calculateTax(100,false)");
+let taxValue = calculateTax(1000, false);
 if (taxValue !== null) {
     switch (typeof taxValue) {
         case "number":

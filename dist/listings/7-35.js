@@ -1,5 +1,5 @@
 // // Asserting a non-null value
-
+/*
 function calculateTax(amount: number, format: boolean): string | number | null {
   if (amount === 0) {
     return null;
@@ -8,8 +8,7 @@ function calculateTax(amount: number, format: boolean): string | number | null {
   return format ? `$${calcAmount.toFixed(2)} ` : calcAmount;
 }
 
-let taxValue!: string | number | null;
-eval("taxValue = calculateTax(100,false)");
+let taxValue: string | number | null = calculateTax(1000, false);
 
 if (taxValue !== null) {
   switch (typeof taxValue) {
@@ -23,3 +22,5 @@ if (taxValue !== null) {
 } else {
   console.log("Value is not a string or a number");
 }
+
+*/
