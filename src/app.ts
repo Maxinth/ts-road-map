@@ -3,7 +3,7 @@ function calculateTax(amount: number, format: boolean): string | number {
   return format ? `$${calcAmount.toFixed(2)} ` : calcAmount;
 }
 
-let taxNumber: number = calculateTax(100, false) as number;
+let taxNumber: number = calculateTax(500, false) as number;
 let taxString: string = calculateTax(100, true) as string;
 
 console.log(`Number Value: ${taxNumber.toFixed(2)}`);

@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "tsc"
+    "start": "tsc-watch --onsuccess \"nodemon dist/app.js\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Maxinth/ts-road-map/issues"
   },
-  "homepage": "https://github.com/Maxinth/ts-road-map#readme"
+  "homepage": "https://github.com/Maxinth/ts-road-map#readme",
+  "devDependencies": {
+    "tsc-watch": "^2.1.2"
+  }
 }
