@@ -1,26 +1,12 @@
 // Asserting to an unexpected type
 function calculateTax(amount, format) {
+    if (amount === 0) {
+        return null;
+    }
     const calcAmount = amount * 1.2;
     return format ? `$${calcAmount.toFixed(2)} ` : calcAmount;
 }
-// let taxNumber: number = calculateTax(500, false) as number;
-// assertion alternative syntax
-// let taxString = <string>calculateTax(100, true);
-// alternatively
-// let taxString = calculateTax(100, true) as string;
-// console.log(`Number Value: ${taxNumber.toFixed(2)}`);
-// console.log(`String Value: ${taxString.charAt(0)}`);
-let taxValue = calculateTax(100, false);
-// using a type guard - initial implementation using if-else block.
-/*
-
-if (typeof taxValue === "number") {
-  console.log(`Number Value: ${taxValue.toFixed(2)}`);
-} else if (typeof taxValue === "string") {
-  console.log(`String Value: ${taxValue.charAt(0)}`);
-}
-
-*/
+let taxValue = calculateTax(0, false);
 // type guarding in a switch statement.
 switch (typeof taxValue) {
     case "number":
@@ -30,8 +16,14 @@ switch (typeof taxValue) {
         console.log(`String Value: ${taxValue.charAt(0)}`);
         break;
     default:
-        let value = taxValue;
-        console.log(`Unexpected type for value : ${value}`);
+        if (taxValue === null) {
+            console.log("Value is null");
+        }
+        else {
+            console.log("type of taxValue = ", typeof taxValue);
+            let value = taxValue;
+            console.log(`Unexpected type has been detected for taxValue other than string | number : ${value}`);
+        }
 }
 let newResult = calculateTax(200, false);
 let myNumber = newResult;
