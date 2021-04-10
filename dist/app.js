@@ -28,16 +28,14 @@ console.log(`Full amount in tax: ${taxAmount}`);
 console.log(`Half share: ${halfShare}`);
 
 */
-// changing result type
-// /*
+// using the any type
 function calculateTax(amount) {
     return (amount * 1.2).toFixed(2);
 }
 let price = 100;
 let taxAmount = calculateTax(price);
 console.log(`taxAmount = ${typeof taxAmount}`);
-// let halfShare = taxAmount / 2;
+let halfShare = taxAmount / 2;
 console.log(`Price: ${price}`);
 console.log(`Full amount in tax: ${taxAmount}`);
 console.log(`Half share: ${halfShare}`);
-// */
