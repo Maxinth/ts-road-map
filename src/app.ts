@@ -1,52 +1,10 @@
-// Applying Annotations to Variables
-
-/*
-
-function calculateTax(amount: number): number {
-  return amount * 1.2;
+function calculateTax(amount: number, format: boolean): string | number {
+  const calcAmount = amount * 1.2;
+  return format ? `$${calcAmount.toFixed(2)} ` : calcAmount;
 }
 
-let price: number = 100;
-let taxAmount: number = calculateTax(price);
-let halfShare: number = taxAmount / 2;
+let taxNumber = calculateTax(100, false);
+let taxString = calculateTax(100, true);
 
-console.log(`Full amount in tax: ${taxAmount}`);
-console.log(`Half share: ${halfShare}`);
-
-*/
-
-// implicitly defined static types
-/* 
-
-function calculateTax(amount: number) {
-  return amount * 1.2;
-}
-
-let price = 100;
-let taxAmount = calculateTax(price);
-let halfShare = taxAmount / 2;
-
-console.log(`Full amount in tax: ${taxAmount}`);
-console.log(`Half share: ${halfShare}`);
-
-*/
-
-// using the any type
-
-function calculateTax(amount: any): any {
-  return `$${(amount * 1.2).toFixed(2)}`;
-}
-
-let price = 100;
-let taxAmount = calculateTax(price);
-console.log(`taxAmount = ${typeof taxAmount}`);
-
-let halfShare = taxAmount / 2;
-console.log(`Price: ${price}`);
-
-console.log(`Full amount in tax: ${taxAmount}`);
-console.log(`Half share: ${halfShare}`);
-
-let newResult: any = calculateTax(200);
-let myNumber: number = newResult;
-console.log(`Number value: ${myNumber.toFixed(2)}`);
+console.log("taxNumber = ", taxNumber);
+console.log("taxString = ", taxString);

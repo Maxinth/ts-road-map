@@ -5,7 +5,8 @@
     "rootDir": "./src",
     // "noEmitOnError": true,
     "watch": true,
-    "module": "commonjs"
+    "module": "commonjs",
+    "noImplicitAny": true
     // "declaration": true
     // "lib": ["es5", "dom", "es2015.collection"]
   }
