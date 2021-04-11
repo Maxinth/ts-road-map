@@ -9,8 +9,8 @@ function writePrice(product: string, price: number): void {
 }
 
 // alternate array types declaration syntax, Array<number> is equivalent to number[]
-let prices: Array<number> = [100, 75, 42];
-let names: string[] = ["hat", "gloves", "umbrella"];
+let prices = [100, 75, 42, "20"];
+let names = ["hat", "gloves", "umbrella", "sunglasses"];
 
 prices.forEach((price: number, index: number) =>
   writePrice(names[index], calculateTax(price))
