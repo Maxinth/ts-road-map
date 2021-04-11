@@ -1,8 +1,8 @@
 /* Using Functions */
 
-// optional parameters
-
-function calculateTax(amount: number, discount?: number): number {
+// using a  parameter with a default value
+// discount is provided a default value when not supplied when calling the function - see line 13
+function calculateTax(amount: number, discount: number = 0): number {
   return amount * 1.2 - (discount || 0);
 }
 
