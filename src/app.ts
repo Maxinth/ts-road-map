@@ -8,10 +8,9 @@ function writePrice(product: string, price: number): void {
   console.log(`price for ${product} : $${price.toFixed(2)}`);
 }
 
-let hatPrice = 100;
-let glovesPrice = 85;
-let umbrellaPrice = 42;
+let prices: number[] = [100, 75, 42];
+let names: string[] = ["hat", "gloves", "umbrella"];
 
-writePrice("Hat", calculateTax(hatPrice));
-writePrice("Gloves", calculateTax(glovesPrice));
-writePrice("Umbrella", calculateTax(umbrellaPrice));
+writePrice(names[0].toUpperCase(), calculateTax(prices[0]));
+writePrice(names[1].toUpperCase(), calculateTax(prices[1]));
+writePrice(names[2].toUpperCase(), calculateTax(prices[2]));
