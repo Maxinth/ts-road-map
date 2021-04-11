@@ -8,9 +8,10 @@ function writePrice(product: string, price: number): void {
   console.log(`price for ${product} : $${price.toFixed(2)}`);
 }
 
-let prices: number[] = [100, 75, 42];
+// alternate array types declaration syntax, Array<number> is equivalent to number[]
+let prices: Array<number> = [100, 75, 42];
 let names: string[] = ["hat", "gloves", "umbrella"];
 
-writePrice(names[0].toUpperCase(), calculateTax(prices[0]));
-writePrice(names[1].toUpperCase(), calculateTax(prices[1]));
-writePrice(names[2].toUpperCase(), calculateTax(prices[2]));
+prices.forEach((price: number, index: number) =>
+  writePrice(names[index], calculateTax(price))
+);
