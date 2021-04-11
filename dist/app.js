@@ -1,11 +1,7 @@
 /* Using Functions */
-// using a  parameter with a default value
-// discount is provided a default value when not supplied when calling the function - see line 13
-function calculateTax(amount, discount = 0) {
-    return amount * 1.2 - (discount || 0);
+// using a rest parameters
+function calculateTax(amount, discount = 0, ...extraFees) {
+    return (amount * 1.2 - discount + extraFees.reduce((total, val) => total + val));
 }
-let taxValue = calculateTax(100, 0);
-console.log(`2 args: ${taxValue}`);
-// calling said function leaving the optional parameter out
-taxValue = calculateTax(100);
-console.log(`1 arg: ${taxValue}`);
+let taxValue = calculateTax(100, 10, 20, 1, 30, 7);
+console.log(`6 args: ${taxValue}`);

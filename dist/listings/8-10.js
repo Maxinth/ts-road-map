@@ -1,4 +1,5 @@
 /* Using Functions */
+/*
 
 // using a rest parameters
 function calculateTax(
@@ -12,3 +13,5 @@ function calculateTax(
 }
 let taxValue = calculateTax(100, 10, 20, 1, 30, 7);
 console.log(`6 args: ${taxValue}`);
+
+*/
