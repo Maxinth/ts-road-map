@@ -6,6 +6,7 @@ function writePrice(product, price) {
     console.log(`price for ${product} : $${price.toFixed(2)}`);
 }
 // alternate array types declaration syntax, Array<number> is equivalent to number[]
-let prices = [100, 75, 42, "20"];
+let prices = [];
+prices.push(...[100, 75, 42, "20"]);
 let names = ["hat", "gloves", "umbrella", "sunglasses"];
 prices.forEach((price, index) => writePrice(names[index], calculateTax(price)));
