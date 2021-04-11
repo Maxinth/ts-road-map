@@ -1,5 +1,5 @@
 /* Using Functions */
-
+/*
 // functions type overload
 function calculateTax(amount: number): number;
 function calculateTax(amount: null): null;
@@ -16,3 +16,5 @@ let taxAmount: number = calculateTax(100);
 //if (typeof taxAmount === "number") {
 writeValue("Tax value", taxAmount);
 //}
+
+*/
