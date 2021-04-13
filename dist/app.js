@@ -5,23 +5,31 @@ function calculateTax(amount) {
 function writePrice(product, price) {
     console.log(`price for ${product} : $${price.toFixed(2)}`);
 }
+//
 var Product;
 (function (Product) {
     Product[Product["Hat"] = 0] = "Hat";
     Product[Product["Gloves"] = 1] = "Gloves";
     Product[Product["Umbrella"] = 2] = "Umbrella";
 })(Product || (Product = {}));
-let products = [
-    [Product.Hat, 100],
-    [Product.Gloves, 75],
-];
-products.forEach((prod) => {
-    switch (prod[0]) {
-        case Product.Hat:
-            writePrice("Hat", calculateTax(prod[1]));
-            break;
-        case Product.Gloves:
-            writePrice("Gloves", calculateTax(prod[1]));
-            break;
-    }
+[Product.Hat, Product.Gloves, Product.Umbrella].forEach((val) => {
+    console.log(`Number value: ${val}`);
 });
+/*
+enum Product {
+  Hat,
+  Gloves,
+  Umbrella,
+}
+
+is a way of writing Product = {
+  0: Hat,
+  1:Gloves,
+  2:Umbrella
+}
+
+
+while accessing property values as Product.Hat, Product.Gloves,
+Product.Umbrella
+
+*/
