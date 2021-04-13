@@ -12,7 +12,7 @@ function writePrice(product: string, price: number): void {
 
 enum Product {
   Hat,
-  Gloves,
+  Gloves = 20,
   Umbrella,
 }
 
