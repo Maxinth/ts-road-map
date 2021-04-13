@@ -5,22 +5,23 @@ function calculateTax(amount) {
 function writePrice(product, price) {
     console.log(`price for ${product} : $${price.toFixed(2)}`);
 }
-let hat = ["Hat", 100];
-let gloves = ["gloves", 75];
-let products = [hat, gloves];
-let tupleUnion = [true, false, hat, ...products];
-tupleUnion.forEach((elem) => {
-    if (elem instanceof Array) {
-        elem.forEach((tupleElem) => {
-            if (typeof tupleElem === "string") {
-                console.log(`String value: ${tupleElem}`);
-            }
-            else {
-                console.log(`Number Value: ${tupleElem}`);
-            }
-        });
-    }
-    else if (typeof elem === "boolean") {
-        console.log(`Boolean value: ${elem}`);
+var Product;
+(function (Product) {
+    Product[Product["Hat"] = 0] = "Hat";
+    Product[Product["Gloves"] = 1] = "Gloves";
+    Product[Product["Umbrella"] = 2] = "Umbrella";
+})(Product || (Product = {}));
+let products = [
+    [Product.Hat, 100],
+    [Product.Gloves, 75],
+];
+products.forEach((prod) => {
+    switch (prod[0]) {
+        case Product.Hat:
+            writePrice("Hat", calculateTax(prod[1]));
+            break;
+        case Product.Gloves:
+            writePrice("Gloves", calculateTax(prod[1]));
+            break;
     }
 });

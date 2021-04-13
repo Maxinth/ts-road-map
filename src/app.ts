@@ -11,22 +11,24 @@ function writePrice(product: string, price: number): void {
   console.log(`price for ${product} : $${price.toFixed(2)}`);
 }
 
-let hat: strNum = ["Hat", 100];
-let gloves: strNum = ["gloves", 75];
+enum Product {
+  Hat,
+  Gloves,
+  Umbrella,
+}
 
-let products: [string, number][] = [hat, gloves];
-let tupleUnion: (strNum | boolean)[] = [true, false, hat, ...products];
+let products: [Product, number][] = [
+  [Product.Hat, 100],
+  [Product.Gloves, 75],
+];
 
-tupleUnion.forEach((elem: strNum | boolean) => {
-  if (elem instanceof Array) {
-    elem.forEach((tupleElem: string | number) => {
-      if (typeof tupleElem === "string") {
-        console.log(`String value: ${tupleElem}`);
-      } else {
-        console.log(`Number Value: ${tupleElem}`);
-      }
-    });
-  } else if (typeof elem === "boolean") {
-    console.log(`Boolean value: ${elem}`);
+products.forEach((prod) => {
+  switch (prod[0]) {
+    case Product.Hat:
+      writePrice("Hat", calculateTax(prod[1]));
+      break;
+    case Product.Gloves:
+      writePrice("Gloves", calculateTax(prod[1]));
+      break;
   }
 });
