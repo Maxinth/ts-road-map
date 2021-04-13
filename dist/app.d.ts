@@ -1,4 +1,5 @@
+declare type strNum = [string, number];
 declare function calculateTax(amount: number): number;
 declare function writePrice(product: string, price: number): void;
-declare let prices: never[];
-declare let names: string[];
+declare let hat: strNum;
+declare let gloves: strNum;

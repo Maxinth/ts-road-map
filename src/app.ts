@@ -1,4 +1,7 @@
-// using arrays, tuples and enums
+// working with tuples
+
+// defining type so it can be reused
+type strNum = [string, number];
 
 function calculateTax(amount: number): number {
   return amount * 1.2;
@@ -8,11 +11,8 @@ function writePrice(product: string, price: number): void {
   console.log(`price for ${product} : $${price.toFixed(2)}`);
 }
 
-// alternate array types declaration syntax, Array<number> is equivalent to number[]
-let prices = [];
-prices.push(...[100, 75, 42, "20"]);
-let names = ["hat", "gloves", "umbrella", "sunglasses"];
+let hat: strNum = ["Hat", 100];
+let gloves: strNum = ["gloves", 75];
 
-prices.forEach((price: number, index: number) =>
-  writePrice(names[index], calculateTax(price))
-);
+writePrice(hat[0], hat[1]);
+writePrice(gloves[0], gloves[1]);
