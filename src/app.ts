@@ -14,10 +14,19 @@ function writePrice(product: string, price: number): void {
 let hat: strNum = ["Hat", 100];
 let gloves: strNum = ["gloves", 75];
 
-hat.forEach((h: string | number) => {
-  if (typeof h === "string") {
-    console.log(`string: ${h}`);
-  } else {
-    console.log(`Number: ${h.toFixed(2)}`);
+let products: [string, number][] = [hat, gloves];
+let tupleUnion: (strNum | boolean)[] = [true, false, hat, ...products];
+
+tupleUnion.forEach((elem: strNum | boolean) => {
+  if (elem instanceof Array) {
+    elem.forEach((tupleElem: string | number) => {
+      if (typeof tupleElem === "string") {
+        console.log(`String value: ${tupleElem}`);
+      } else {
+        console.log(`Number Value: ${tupleElem}`);
+      }
+    });
+  } else if (typeof elem === "boolean") {
+    console.log(`Boolean value: ${elem}`);
   }
 });

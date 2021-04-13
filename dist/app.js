@@ -7,11 +7,20 @@ function writePrice(product, price) {
 }
 let hat = ["Hat", 100];
 let gloves = ["gloves", 75];
-hat.forEach((h) => {
-    if (typeof h === "string") {
-        console.log(`string: ${h}`);
+let products = [hat, gloves];
+let tupleUnion = [true, false, hat, ...products];
+tupleUnion.forEach((elem) => {
+    if (elem instanceof Array) {
+        elem.forEach((tupleElem) => {
+            if (typeof tupleElem === "string") {
+                console.log(`String value: ${tupleElem}`);
+            }
+            else {
+                console.log(`Number Value: ${tupleElem}`);
+            }
+        });
     }
-    else {
-        console.log(`Number: ${h.toFixed(2)}`);
+    else if (typeof elem === "boolean") {
+        console.log(`Boolean value: ${elem}`);
     }
 });
