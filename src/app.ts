@@ -10,10 +10,15 @@ function writePrice(product: string, price: number): void {
 
 // using enum and number values
 
+enum OtherEnum {
+  First = 10,
+  Two = 20,
+}
+
 enum Product {
-  Hat,
+  Hat = OtherEnum.First + 1,
   Gloves = 20,
-  Umbrella,
+  Umbrella = Hat + Gloves,
 }
 
 let productValue: Product = 0;
