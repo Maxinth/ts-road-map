@@ -1,9 +1,2 @@
-const enum Product {
-  Hat,
-  Gloves,
-  Umbrella,
-}
-
-let productVal = Product.Hat;
-
-console.log(`productVal = ${Product.}`);
+let restrictedVal: 1 | 2 | 3 = 3;
+console.log(`Value = ${restrictedVal}`);

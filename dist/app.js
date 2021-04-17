@@ -1,2 +1,2 @@
-let productVal = 0 /* Hat */;
-console.log(`productVal = ${Product.}`);
+let restrictedVal = 3;
+console.log(`Value = ${restrictedVal}`);
