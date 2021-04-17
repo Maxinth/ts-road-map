@@ -20,3 +20,11 @@ var Product;
 let productValue = 0;
 let productName = Product[productValue];
 console.log(`Value : ${productValue}, Name: ${productName}`);
+var City;
+(function (City) {
+    City["London"] = "London";
+    City["Paris"] = "Paris";
+    City["NY"] = "New York";
+})(City || (City = {}));
+console.log(`City = ${City.London}`);
+console.log(`Third city = ${City.NY}`);

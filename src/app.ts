@@ -24,3 +24,11 @@ enum Product {
 let productValue: Product = 0;
 let productName: string = Product[productValue];
 console.log(`Value : ${productValue}, Name: ${productName}`);
+
+enum City {
+  London = "London",
+  Paris = "Paris",
+  NY = "New York",
+}
+console.log(`City = ${City.London}`);
+console.log(`Third city = ${City.NY}`);
