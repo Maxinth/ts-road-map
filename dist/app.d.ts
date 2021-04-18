@@ -1,8 +1,7 @@
-declare type Foot = number;
-declare type Pound = number;
-declare type Patient = {
-    name: string;
-    height: Foot;
-    weight?: Pound;
-};
-declare let patient: Patient;
+interface Person {
+    firstName: string;
+    lastName: string;
+    age: number;
+}
+declare function savePerson(person: Person): void;
+declare const p: Person;

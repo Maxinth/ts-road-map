@@ -1,26 +1,18 @@
-// function calculatePrice(quantity: 1 | 2, price: number): number {
-//   return quantity * price;
-// }
+// using interfaces
+interface Person {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
 
-// let total = calculatePrice(2, 19.98);
-// console.log(`Price : ${total}`);
+function savePerson(person: Person): void {
+  console.log("Saving ", person.lastName);
+}
 
-// using the type keyword
-
-type Foot = number;
-type Pound = number;
-
-// declaring a new type that uses aliases (with optional properties)
-type Patient = {
-  name: string;
-  height: Foot;
-  weight?: Pound;
+const p: Person = {
+  firstName: "John",
+  lastName: "Smith",
+  age: 35,
 };
 
-let patient: Patient = {
-  name: "Joe smith",
-  height: 0,
-  // weight: 100,
-};
-
-console.log("patient = ", patient);
+savePerson(p);

@@ -1,9 +1,9 @@
-// function calculatePrice(quantity: 1 | 2, price: number): number {
-//   return quantity * price;
-// }
-let patient = {
-    name: "Joe smith",
-    height: 0,
-    // weight: 100,
+function savePerson(person) {
+    console.log("Saving ", person.lastName);
+}
+const p = {
+    firstName: "John",
+    lastName: "Smith",
+    age: 35,
 };
-console.log("patient = ", patient);
+savePerson(p);
