@@ -1,9 +1,6 @@
-function savePerson(person) {
-    console.log("Saving ", person);
+//structural types
+class Person {
 }
-const p = {
-    firstName: "John",
-    lastName: "Smith",
-    age: 35,
-};
-savePerson(p);
+class Customer {
+}
+const customer = new Person();

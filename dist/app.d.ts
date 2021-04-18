@@ -1,11 +1,8 @@
-interface Person {
-    firstName: string;
-    lastName: string;
+declare class Person {
+    name: string;
     age: number;
 }
-declare function savePerson(person: Person): void;
-declare const p: {
-    firstName: string;
-    lastName: string;
-    age: number;
-};
+declare class Customer {
+    name: string;
+}
+declare const customer: Customer;
