@@ -1,5 +1,5 @@
 function savePerson(person) {
-    console.log("Saving ", person.lastName);
+    console.log("Saving ", person);
 }
 const p = {
     firstName: "John",

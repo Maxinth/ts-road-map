@@ -4,4 +4,8 @@ interface Person {
     age: number;
 }
 declare function savePerson(person: Person): void;
-declare const p: Person;
+declare const p: {
+    firstName: string;
+    lastName: string;
+    age: number;
+};

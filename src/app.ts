@@ -6,10 +6,10 @@ interface Person {
 }
 
 function savePerson(person: Person): void {
-  console.log("Saving ", person.lastName);
+  console.log("Saving ", person);
 }
 
-const p: Person = {
+const p = {
   firstName: "John",
   lastName: "Smith",
   age: 35,
