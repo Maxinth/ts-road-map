@@ -1,2 +1,8 @@
-declare function calculatePrice(quantity: 1 | 2, price: number): number;
-declare let total: number;
+declare type Foot = number;
+declare type Pound = number;
+declare type Patient = {
+    name: string;
+    height: Foot;
+    weight: Pound;
+};
+declare let patient: Patient;
