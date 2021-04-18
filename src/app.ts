@@ -10,17 +10,17 @@
 type Foot = number;
 type Pound = number;
 
-// declaring a new type that uses aliases
+// declaring a new type that uses aliases (with optional properties)
 type Patient = {
   name: string;
   height: Foot;
-  weight: Pound;
+  weight?: Pound;
 };
 
 let patient: Patient = {
   name: "Joe smith",
   height: 0,
-  weight: 100,
+  // weight: 100,
 };
 
 console.log("patient = ", patient);

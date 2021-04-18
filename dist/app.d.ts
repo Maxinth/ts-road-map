@@ -3,6 +3,6 @@ declare type Pound = number;
 declare type Patient = {
     name: string;
     height: Foot;
-    weight: Pound;
+    weight?: Pound;
 };
 declare let patient: Patient;
