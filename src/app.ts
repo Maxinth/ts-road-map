@@ -9,3 +9,4 @@ class Customer {
 }
 
 const customer: Customer = new Person();
+console.log("more test");
