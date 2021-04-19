@@ -4,7 +4,6 @@ class Person {
   name: string;
   age: number;
 }
-
 class Customer {
   name: string;
 }
