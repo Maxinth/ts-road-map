@@ -5,9 +5,6 @@ class Person {
   age: number;
 }
 
-interface Customer {
-  name: string;
-}
 class Customer {
   name: string;
 }
