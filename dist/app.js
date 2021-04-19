@@ -1,6 +1,14 @@
-//structural types
-class Person {
+function canDrive(user) {
+    console.log("user is ", user.name);
+    if (user.age >= 16) {
+        console.log("allowed to drive");
+    }
+    else {
+        console.log("do not allow to drive");
+    }
 }
-class Customer {
-}
-const customer = new Person();
+const tom = {
+    name: "tom",
+    age: 55,
+};
+canDrive(tom);

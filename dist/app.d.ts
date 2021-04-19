@@ -1,8 +1,9 @@
-declare class Person {
+interface User {
     name: string;
     age: number;
 }
-declare class Customer {
+declare function canDrive(user: User): void;
+declare const tom: {
     name: string;
-}
-declare const customer: Customer;
+    age: number;
+};
