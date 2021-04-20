@@ -5,7 +5,6 @@ literal = "linda";
 // literal can only be assigned ONLY any one of the four pre-defined values
 // literal = 'new'
 console.log(literal);
-// numeric literal
 function getNameByCount(num = 1) {
     if (num === 1) {
         console.log("you are number one by default");

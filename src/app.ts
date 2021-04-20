@@ -11,8 +11,9 @@ literal = "linda";
 console.log(literal);
 
 // numeric literal
+type count = 1 | 2 | 3; // alias
 
-function getNameByCount(num: 1 | 2 | 3 = 1): void {
+function getNameByCount(num: count = 1): void {
   if (num === 1) {
     console.log("you are number one by default");
   }
