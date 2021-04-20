@@ -1,23 +1,16 @@
 // Full stack react+Ts+Node
-// ts - literal types
-let literal = "sue";
-literal = "linda";
-// literal can only be assigned ONLY any one of the four pre-defined values
-// literal = 'new'
-console.log(literal);
-function getNameByCount(num = 1) {
-    if (num === 1) {
-        console.log("you are number one by default");
-    }
-    if (num === 2) {
-        console.log("you are number two");
-    }
-    if (num === 3) {
-        console.log("you are number three");
-    }
+// functions with no return value
+function eat(calories) {
+    console.log(`I ate ${calories} eggs`);
 }
-getNameByCount(2);
-getNameByCount(3);
-getNameByCount(); // default is 1
-// passing any other number apart from the literal defined in the function
-// signature results in an error
+// even with the return before the log = function still return void(no value)
+function eatMore(calories) {
+    return console.log(`Later, I ate ${calories} more eggs`);
+}
+// function returns a value - a number
+function drink(cup) {
+    return cup;
+}
+eat(4);
+eatMore(5);
+console.log(`I drank ${drink(3)} cups of water`);

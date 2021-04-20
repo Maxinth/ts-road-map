@@ -1,3 +1,3 @@
-declare let literal: "tom" | "linda" | "jeff" | "sue";
-declare type count = 1 | 2 | 3;
-declare function getNameByCount(num?: count): void;
+declare function eat(calories: number): void;
+declare function eatMore(calories: number): void;
+declare function drink(cup: number): number;
