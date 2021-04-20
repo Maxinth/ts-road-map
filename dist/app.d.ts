@@ -1,7 +1,2 @@
-declare class Person {
-    name: string;
-}
-declare const jill: {
-    name: string;
-};
-declare const person: Person;
+declare let val: unknown;
+declare function getVal(): void;

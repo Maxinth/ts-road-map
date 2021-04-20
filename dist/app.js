@@ -1,9 +1,13 @@
 // Full stack react+Ts+Node
-// ts - checking for structure and not name.
-class Person {
+// ts - using the any type.
+let val = [22];
+val = "string value";
+function getVal() {
+    console.log(`value here is = ${val}`);
 }
-const jill = {
-    name: "tuned",
-};
-const person = jill;
-console.log(person);
+getVal();
+val = [];
+getVal();
+val.push(33);
+val.push(77);
+getVal();
