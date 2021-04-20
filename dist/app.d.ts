@@ -1,2 +1,5 @@
-declare let val: unknown;
-declare function getVal(): void;
+declare let obj: {
+    name: string;
+} & {
+    age: number;
+};
