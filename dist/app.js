@@ -1,14 +1,9 @@
-function canDrive(user) {
-    console.log("user is ", user.name);
-    if (user.age >= 16) {
-        console.log("allowed to drive");
-    }
-    else {
-        console.log("do not allow to drive");
-    }
+// Full stack react+Ts+Node
+// ts - checking for structure and not name.
+class Person {
 }
-const tom = {
-    name: "tom",
-    age: 55,
+const jill = {
+    name: "tuned",
 };
-canDrive(tom);
+const person = jill;
+console.log(person);
