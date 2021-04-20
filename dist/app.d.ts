@@ -1,5 +1,3 @@
-declare let obj: {
+declare let unionObj: null | {
     name: string;
-} & {
-    age: number;
 };

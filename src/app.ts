@@ -1,9 +1,7 @@
 // Full stack react+Ts+Node
 // ts - using intersection types
+type objString = { name: string };
 
-let obj: { name: string } & { age: number } = {
-  name: "tom",
-  age: 34,
-};
-
-console.log("obj = ", obj);
+let unionObj: null | objString = null;
+unionObj = { name: "jon" };
+console.log(unionObj);
