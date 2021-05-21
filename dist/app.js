@@ -12,4 +12,5 @@ let umbrella = {
     hasFeature: (feature) => feature === Feature.Waterproof,
 };
 let products = [hat, gloves, umbrella];
-products.forEach((item) => console.log(`${item.name}: ${item.price} WaterProof: ${item.hasFeature(Feature.Waterproof)}`));
+products.forEach((prod) => console.log(`${prod.name}: ${prod.price} ` +
+    `${prod.hasFeature ? prod.hasFeature(Feature.Waterproof) : "false"}`));
