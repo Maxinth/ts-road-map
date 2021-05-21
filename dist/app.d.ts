@@ -1,6 +1,7 @@
 interface Items {
     name: string;
-    price: number;
+    price?: number;
+    waterproof?: boolean;
 }
 declare let hat: {
     name: string;
