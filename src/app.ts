@@ -18,6 +18,15 @@ let umbrella = {
   price: 30,
   hasFeature: (feature) => feature === Feature.Waterproof,
 };
+
+let mirrorShades = {
+  name: "Sunglasses",
+  price: 54,
+  finish: "mirrored",
+};
+
+let darkShades: Items = { name: "Sunglasses", price: 54, finish: "flat" };
+
 let products: Items[] = [hat, gloves, umbrella];
 
 products.forEach((prod) =>

@@ -20,4 +20,10 @@ declare let umbrella: {
     price: number;
     hasFeature: (feature: any) => boolean;
 };
+declare let mirrorShades: {
+    name: string;
+    price: number;
+    finish: string;
+};
+declare let darkShades: Items;
 declare let products: Items[];
