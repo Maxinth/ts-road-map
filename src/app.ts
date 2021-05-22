@@ -7,9 +7,15 @@ function writePrice(product: string, price: number): void {
   console.log(`Price for ${product}: $${price.toFixed(2)}`);
 }
 
-let prices: number[] = [100, 75, 42];
-let names: string[] = ["Hat", "Gloves", "umbrellas"];
+// let prices: number[] = [100, 75, 42];
+// let names: string[] = ["Hat", "Gloves", "umbrellas"];
 
-prices.forEach((price: number, index: number) => {
+// prices.forEach((price: number, index: number) => {
+//   writePrice(names[index], calculateTax(price));
+// });
+
+let prices = [100, 75, 42];
+let names = ["Hat", "Gloves", "Umbrella"];
+prices.forEach((price, index) => {
   writePrice(names[index], calculateTax(price));
 });
