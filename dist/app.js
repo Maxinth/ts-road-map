@@ -10,8 +10,8 @@ function writePrice(product, price) {
 // prices.forEach((price: number, index: number) => {
 //   writePrice(names[index], calculateTax(price));
 // });
-let prices = [100, 75, 42];
-let names = ["Hat", "Gloves", "Umbrella"];
+let prices = [100, 75, 42, "20"];
+let names = ["Hat", "Gloves", "Umbrella", "Sunglasses"];
 prices.forEach((price, index) => {
     writePrice(names[index], calculateTax(price));
 });
