@@ -1,29 +1,5 @@
-declare enum Feature {
-    Waterproof = 0,
-    Insulated = 1
-}
-interface Items {
-    name: string;
-    price?: number;
-    hasFeature?(feature: any): boolean;
-}
-declare let hat: {
-    name: string;
-    price: number;
-};
-declare let gloves: {
-    name: string;
-    price: number;
-};
-declare let umbrella: {
-    name: string;
-    price: number;
-    hasFeature: (feature: any) => boolean;
-};
-declare let mirrorShades: {
-    name: string;
-    price: number;
-    finish: string;
-};
-declare let darkShades: Items;
-declare let products: Items[];
+declare function calculateTax(amount: number): number;
+declare function writePrice(product: string, price: number): void;
+declare let hatPrice: number;
+declare let glovesPrice: number;
+declare let umbrellaPrice: number;

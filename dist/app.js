@@ -1,22 +1,13 @@
 // essential ts
-var Feature;
-(function (Feature) {
-    Feature[Feature["Waterproof"] = 0] = "Waterproof";
-    Feature[Feature["Insulated"] = 1] = "Insulated";
-})(Feature || (Feature = {}));
-let hat = { name: "Hat", price: 100 };
-let gloves = { name: "Gloves", price: 75 };
-let umbrella = {
-    name: "Umbrella",
-    price: 30,
-    hasFeature: (feature) => feature === Feature.Waterproof,
-};
-let mirrorShades = {
-    name: "Sunglasses",
-    price: 54,
-    finish: "mirrored",
-};
-let darkShades = { name: "Sunglasses", price: 54, finish: "flat" };
-let products = [hat, gloves, umbrella];
-products.forEach((prod) => console.log(`${prod.name}: ${prod.price} ` +
-    `${prod.hasFeature ? prod.hasFeature(Feature.Waterproof) : "false"}`));
+function calculateTax(amount) {
+    return amount * 1.2;
+}
+function writePrice(product, price) {
+    console.log(`Price for ${product}: $${price.toFixed(2)}`);
+}
+let hatPrice = 100;
+let glovesPrice = 75;
+let umbrellaPrice = 42;
+writePrice("Hat", calculateTax(hatPrice));
+writePrice("Gloves", calculateTax(glovesPrice));
+writePrice("Umbrella", calculateTax(umbrellaPrice));
