@@ -10,22 +10,7 @@ var Product;
     Product[Product["Gloves"] = 1] = "Gloves";
     Product[Product["Umbrella"] = 2] = "Umbrella";
 })(Product || (Product = {}));
-let products = [
-    [Product.Hat, 100],
-    [Product.Gloves, 75],
-];
-products.forEach((prod) => {
-    switch (prod[0]) {
-        case Product.Hat:
-            writePrice("hat", calculateTax(prod[1]));
-            break;
-        case Product.Gloves:
-            writePrice("Gloves", calculateTax(prod[1]));
-            break;
-        case Product.Umbrella:
-            writePrice("Umbrella", calculateTax(prod[1]));
-            break;
-        default:
-            console.log("no matches!");
-    }
+const enumArray = [Product.Hat, Product.Gloves, Product.Umbrella];
+enumArray.forEach((val) => {
+    console.log(`Number value : ${val}`);
 });

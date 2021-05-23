@@ -12,24 +12,8 @@ enum Product {
   Umbrella,
 }
 
-type Prod = [Product, number];
-let products: Prod[] = [
-  [Product.Hat, 100],
-  [Product.Gloves, 75],
-];
+const enumArray = [Product.Hat, Product.Gloves, Product.Umbrella];
 
-products.forEach((prod: Prod) => {
-  switch (prod[0]) {
-    case Product.Hat:
-      writePrice("hat", calculateTax(prod[1]));
-      break;
-    case Product.Gloves:
-      writePrice("Gloves", calculateTax(prod[1]));
-      break;
-    case Product.Umbrella:
-      writePrice("Umbrella", calculateTax(prod[1]));
-      break;
-    default:
-      console.log("no matches!");
-  }
+enumArray.forEach((val) => {
+  console.log(`Number value : ${val}`);
 });
