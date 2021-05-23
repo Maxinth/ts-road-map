@@ -6,13 +6,18 @@ function writePrice(product: string, price: number): void {
   console.log(`Price for ${product}: $${price.toFixed(2)}`);
 }
 
-enum Product {
-  Hat = 10,
-  Gloves = 10,
-  Umbrella = 101,
+enum OtherEnum {
+  First = 10,
+  Two = 20,
 }
 
-let productValue: Product = Product.Hat;
+enum Product {
+  Hat = OtherEnum.First + 1,
+  Gloves = 20,
+  Umbrella = Hat + Gloves,
+}
+
+let productValue: Product = 0;
 let productName: string = Product[productValue];
 
 console.log(`Value: ${productValue}, Name: ${productName}`);
