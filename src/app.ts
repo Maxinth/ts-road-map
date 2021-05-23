@@ -7,9 +7,9 @@ function writePrice(product: string, price: number): void {
 }
 
 enum Product {
-  Hat,
-  Gloves,
-  Umbrella,
+  Hat = 10,
+  Gloves = 10,
+  Umbrella = 101,
 }
 
 let productValue: Product = Product.Hat;
