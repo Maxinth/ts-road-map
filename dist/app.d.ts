@@ -5,3 +5,5 @@ declare enum Product {
     Gloves = 1,
     Umbrella = 2
 }
+declare type Prod = [Product, number];
+declare let products: Prod[];

@@ -12,23 +12,24 @@ enum Product {
   Umbrella,
 }
 
-console.log("Product = ", Product);
+type Prod = [Product, number];
+let products: Prod[] = [
+  [Product.Hat, 100],
+  [Product.Gloves, 75],
+];
 
-/*
-Product = {
-  "0": "Hat",
-  "1": "Gloves",
-  "2": "Umbrella",
-}
-
-OR 
- Product = { Hat: 0,
-  Gloves: 1,
-  Umbrella: 2,
-};
-
-
-such that "items" Product[0] = "Hat" or Product.Hat= 0
-
-
-*/
+products.forEach((prod: Prod) => {
+  switch (prod[0]) {
+    case Product.Hat:
+      writePrice("hat", calculateTax(prod[1]));
+      break;
+    case Product.Gloves:
+      writePrice("Gloves", calculateTax(prod[1]));
+      break;
+    case Product.Umbrella:
+      writePrice("Umbrella", calculateTax(prod[1]));
+      break;
+    default:
+      console.log("no matches!");
+  }
+});

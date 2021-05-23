@@ -10,22 +10,22 @@ var Product;
     Product[Product["Gloves"] = 1] = "Gloves";
     Product[Product["Umbrella"] = 2] = "Umbrella";
 })(Product || (Product = {}));
-console.log("Product = ", Product);
-/*
-Product = {
-  "0": "Hat",
-  "1": "Gloves",
-  "2": "Umbrella",
-}
-
-OR
- Product = { Hat: 0,
-  Gloves: 1,
-  Umbrella: 2,
-};
-
-
-such that "items" Product[0] = "Hat" or Product.Hat= 0
-
-
-*/
+let products = [
+    [Product.Hat, 100],
+    [Product.Gloves, 75],
+];
+products.forEach((prod) => {
+    switch (prod[0]) {
+        case Product.Hat:
+            writePrice("hat", calculateTax(prod[1]));
+            break;
+        case Product.Gloves:
+            writePrice("Gloves", calculateTax(prod[1]));
+            break;
+        case Product.Umbrella:
+            writePrice("Umbrella", calculateTax(prod[1]));
+            break;
+        default:
+            console.log("no matches!");
+    }
+});
