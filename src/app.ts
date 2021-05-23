@@ -13,3 +13,22 @@ enum Product {
 }
 
 console.log("Product = ", Product);
+
+/*
+Product = {
+  "0": "Hat",
+  "1": "Gloves",
+  "2": "Umbrella",
+}
+
+OR 
+ Product = { Hat: 0,
+  Gloves: 1,
+  Umbrella: 2,
+};
+
+
+such that "items" Product[0] = "Hat" or Product.Hat= 0
+
+
+*/
