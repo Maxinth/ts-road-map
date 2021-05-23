@@ -17,6 +17,13 @@ enum Product {
   Umbrella = Hat + Gloves,
 }
 
+enum City {
+  London = "London",
+  Paris = "Paris",
+  "NY" = "NY",
+}
+
+console.log(City["London"]);
 let productValue: Product = 0;
 let productName: string = Product[productValue];
 
