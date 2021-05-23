@@ -10,7 +10,6 @@ var Product;
     Product[Product["Gloves"] = 1] = "Gloves";
     Product[Product["Umbrella"] = 2] = "Umbrella";
 })(Product || (Product = {}));
-const enumArray = [Product.Hat, Product.Gloves, Product.Umbrella];
-enumArray.forEach((val) => {
-    console.log(`Number value : ${val}`);
-});
+let productValue = 0;
+let productName = Product[productValue];
+console.log(`Value: ${productValue}, Name: ${productName}`);

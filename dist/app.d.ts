@@ -5,4 +5,5 @@ declare enum Product {
     Gloves = 1,
     Umbrella = 2
 }
-declare const enumArray: Product[];
+declare let productValue: Product;
+declare let productName: string;

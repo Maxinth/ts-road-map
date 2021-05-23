@@ -12,8 +12,7 @@ enum Product {
   Umbrella,
 }
 
-const enumArray = [Product.Hat, Product.Gloves, Product.Umbrella];
+let productValue: Product = 0;
+let productName: string = Product[productValue];
 
-enumArray.forEach((val) => {
-  console.log(`Number value : ${val}`);
-});
+console.log(`Value: ${productValue}, Name: ${productName}`);
