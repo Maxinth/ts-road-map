@@ -12,7 +12,7 @@ enum Product {
   Umbrella,
 }
 
-let productValue: Product = 0;
+let productValue: Product = Product.Hat;
 let productName: string = Product[productValue];
 
 console.log(`Value: ${productValue}, Name: ${productName}`);

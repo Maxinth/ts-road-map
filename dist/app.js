@@ -10,6 +10,6 @@ var Product;
     Product[Product["Gloves"] = 1] = "Gloves";
     Product[Product["Umbrella"] = 2] = "Umbrella";
 })(Product || (Product = {}));
-let productValue = 0;
+let productValue = Product.Hat;
 let productName = Product[productValue];
 console.log(`Value: ${productValue}, Name: ${productName}`);
