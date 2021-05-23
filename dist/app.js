@@ -15,13 +15,11 @@ var Product;
     Product[Product["Gloves"] = 20] = "Gloves";
     Product[Product["Umbrella"] = 31] = "Umbrella";
 })(Product || (Product = {}));
-var City;
-(function (City) {
-    City["London"] = "London";
-    City["Paris"] = "Paris";
-    City["NY"] = "NY";
-})(City || (City = {}));
-console.log(City["London"]);
-let productValue = 0;
+let productValue = Product.Hat;
+if (typeof productValue === "number")
+    console.log("Value is a number");
+let unionValue = Product.Hat;
+if (typeof unionValue === "number")
+    console.log("Value is still a number");
 let productName = Product[productValue];
 console.log(`Value: ${productValue}, Name: ${productName}`);

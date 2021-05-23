@@ -17,14 +17,11 @@ enum Product {
   Umbrella = Hat + Gloves,
 }
 
-enum City {
-  London = "London",
-  Paris = "Paris",
-  "NY" = "NY",
-}
+let productValue: Product = Product.Hat;
+if (typeof productValue === "number") console.log("Value is a number");
 
-console.log(City["London"]);
-let productValue: Product = 0;
+let unionValue: number | Product = Product.Hat;
+if (typeof unionValue === "number") console.log("Value is still a number");
 let productName: string = Product[productValue];
 
 console.log(`Value: ${productValue}, Name: ${productName}`);
