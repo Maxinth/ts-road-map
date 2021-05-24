@@ -1,7 +1,7 @@
-let restrictedValue: 1 | 2 | 3 = 2;
+function calculatePrice(quantity: 1 | 2, price: number): number {
+  return quantity * price;
+}
 
-let secondVal: 1 | 100 | 10 = 1;
+let total = calculatePrice(2, 19.99);
 
-restrictedValue = secondVal;
-secondVal = 100;
-restrictedValue = secondVal;
+console.log(`Price: ${total}`);
