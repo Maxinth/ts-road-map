@@ -1,9 +1,2 @@
-enum Product {
-  Hat,
-  Gloves,
-  Umbrella,
-}
-
-let productValue = Product.Hat;
-
-let productName = Product[0];
+let restrictedValue: 1 | 2 | 3;
+console.log(restrictedValue);
