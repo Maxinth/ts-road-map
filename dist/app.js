@@ -5,3 +5,4 @@ var Product;
     Product[Product["Umbrella"] = 2] = "Umbrella";
 })(Product || (Product = {}));
 let productValue = Product.Hat;
+let productName = Product[0];

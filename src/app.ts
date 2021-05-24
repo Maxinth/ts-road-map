@@ -5,3 +5,5 @@ enum Product {
 }
 
 let productValue = Product.Hat;
+
+let productName = Product[0];

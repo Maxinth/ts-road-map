@@ -4,3 +4,4 @@ declare enum Product {
     Umbrella = 2
 }
 declare let productValue: Product;
+declare let productName: string;
