@@ -12,22 +12,11 @@ var City;
     City["Paris"] = " PAR";
     City["Chicago"] = "CHI";
 })(City || (City = {}));
-function getMixedValue(input) {
-    switch (input) {
-        case 1:
-            return 1;
-        case 2:
-            return "Hello";
-        case 3:
-            return true;
-        case 4:
-        default:
-            return City.London;
-    }
+function getValue(input) {
+    return [
+        ["Apple", 100, 2],
+        ["oranges", true, 3],
+    ];
 }
-let first = getMixedValue(1);
-let second = getMixedValue(2);
-let third = getMixedValue(4);
-console.log(`${first}, ${second}, ${third}`);
-// console.log(`Value: ${getMixedValue()}`);
-//
+let result = getValue([["Bananas", true, 1]]);
+console.log(`Result: ${result}`);
