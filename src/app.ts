@@ -1,8 +1,13 @@
-let hat = { name: "Hat", price: 100 };
-let gloves = { name: "Gloves", price: 75 };
+interface Product {
+  name: string;
+  price: number;
+}
 
-let products = [hat, gloves];
+let hat: Product = { name: "Hat", price: 100 };
+let gloves: Product = { name: "Gloves", price: 75 };
 
-products.forEach((product) => {
+let products: Product[] = [hat, gloves];
+
+products.forEach((product: Product) => {
   console.log(`${product.name} : ${product.price}`);
 });
