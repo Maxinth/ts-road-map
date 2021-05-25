@@ -10,12 +10,17 @@ type Person = {
   city: string;
 };
 
+// union type for common types between Person and Product
+type UnionType = {
+  id: number | string;
+  name: string;
+};
 let hat = { id: 1, name: "Hat", price: 100 };
 let gloves = { id: 2, name: "Gloves", price: 75 };
 let umbrella = { id: 3, name: "Umbrella", price: 30 };
 let bob = { id: "bsmith", name: "Bob", city: "London" };
 
-let dataItems: (Product | Person)[] = [hat, gloves, umbrella, bob];
+let dataItems: UnionType[] = [hat, gloves, umbrella, bob];
 dataItems.forEach((item) => {
   console.log(`ID: ${item.id}, Name: ${item.name} \n `);
 });
