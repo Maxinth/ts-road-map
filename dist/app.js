@@ -1,22 +1,6 @@
-function calculatePrice(quantity, price) {
-    return quantity * price;
-}
-let total = calculatePrice(2, 19.99);
-console.log(`Price: ${total}`);
-function getRandomVal() {
-    return (Math.floor(Math.random() * 4) + 1);
-}
-var City;
-(function (City) {
-    City["London"] = "LON";
-    City["Paris"] = " PAR";
-    City["Chicago"] = "CHI";
-})(City || (City = {}));
-function getValue(input) {
-    return [
-        ["Apple", 100, 2],
-        ["oranges", true, 3],
-    ];
-}
-let result = getValue([["Bananas", true, 1]]);
-console.log(`Result: ${result}`);
+let hat = { name: "Hat", price: 100 };
+let gloves = { name: "Gloves", price: 75 };
+let products = [hat, gloves];
+products.forEach((product) => {
+    console.log(`${product.name} : ${product.price}`);
+});
