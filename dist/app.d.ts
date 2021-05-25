@@ -1,7 +1,15 @@
-interface Product {
+declare let hat: {
     name: string;
     price: number;
-}
-declare let hat: Product;
-declare let gloves: Product;
-declare let products: Product[];
+};
+declare let gloves: {
+    name: string;
+    price: number;
+};
+declare let umbrella: {
+    name: string;
+};
+declare let products: {
+    name: string;
+    price?: number;
+}[];
