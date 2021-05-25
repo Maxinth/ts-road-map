@@ -1,30 +1,29 @@
 enum Feature {
-  WaterProof,
+  Waterproof,
   Insulated,
 }
 
-interface Product {
+type Product = {
   name: string;
   price?: number;
-  hasFeature?(Feature: Feature): boolean;
-}
+  hasFeature?(Feature): boolean;
+};
 
 let hat = { name: "Hat", price: 100 };
 let gloves = { name: "Gloves", price: 75 };
 let umbrella = {
   name: "Umbrella",
   price: 30,
-  hasFeature: (feature: Feature) => feature === Feature.WaterProof,
+  hasFeature: (feature) => feature === Feature.Waterproof,
 };
 
-let products: Product[] = [hat, gloves, umbrella];
+let mirrorShades = { name: "Sunglasses", price: 54, finish: "mirrored" };
+let darkShades: Product = { name: "Sunglasses", price: 54, finish: "flat" };
 
+let products: Product[] = [hat, gloves, umbrella, mirrorShades, darkShades];
 products.forEach((prod) =>
-  // hasFeature?. = checks if hasFeature is available and invokes it if true.
-  console.log(`${prod.name}: ${prod.price}
-  ${prod.hasFeature ? prod.hasFeature(Feature.WaterProof) : "false"}
- 
-`)
+  console.log(
+    `${prod.name}: ${prod.price} ` +
+      `${prod.hasFeature ? prod.hasFeature(Feature.Waterproof) : "false"}`
+  )
 );
-
-//  Waterproof: ${prod.hasFeature?.(Feature.WaterProof)})
