@@ -1,25 +1,28 @@
-// interface Product {
-//   name: string;
-//   price?: number;
-// }
-
-// let hat: Product = { name: "Hat", price: 100 };
-// let gloves: Product = { name: "Gloves", price: 75 };
-// let umbrella = { name: "Umbrella" };
-
-// let products: Product[] = [hat, gloves, umbrella];
-
-// products.forEach((product: Product) => {
-//   console.log(`${product.name} : ${product.price}`);
-// });
-
 interface Product {
   name: string;
   price?: number;
-  waterproof?: boolean;
+  hasFeature?(Feature): boolean;
 }
+
+enum Feature {
+  WaterProof,
+  Insulated,
+}
+
 let hat = { name: "Hat", price: 100 };
 let gloves = { name: "Gloves", price: 75 };
-let umbrella = { name: "Umbrella", price: 30, waterproof: true };
+let umbrella = {
+  name: "Umbrella",
+  price: 30,
+  hasFeature: (feature: number) => feature === Feature.WaterProof,
+};
+
 let products: Product[] = [hat, gloves, umbrella];
-products.forEach((prod) => console.log(`${prod.name}: ${prod.price}`));
+
+products.forEach((prod) =>
+  // hasFeature?. = checks if hasFeature is available and invokes it if true.
+  console.log(`${prod.name}: ${prod.price}
+  
+  Waterproof: ${prod.hasFeature?.(Feature.WaterProof)})
+`)
+);

@@ -1,7 +1,11 @@
 interface Product {
     name: string;
     price?: number;
-    waterproof?: boolean;
+    hasFeature?(Feature: any): boolean;
+}
+declare enum Feature {
+    WaterProof = 0,
+    Insulated = 1
 }
 declare let hat: {
     name: string;
@@ -14,6 +18,6 @@ declare let gloves: {
 declare let umbrella: {
     name: string;
     price: number;
-    waterproof: boolean;
+    hasFeature: (feature: number) => boolean;
 };
 declare let products: Product[];
