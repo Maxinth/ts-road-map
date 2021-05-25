@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es2020",
     "outDir": "./dist",
     "rootDir": "./src",
     // "noEmitOnError": true,
     // "watch": true,
     "module": "commonjs",
     // "noImplicitAny": true,
-    // "strictNullChecks": true,
+    "strictNullChecks": true,
     "declaration": true,
     "suppressExcessPropertyErrors": true
     // "lib": ["es5", "dom", "es2015.collection"]
