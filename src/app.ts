@@ -28,4 +28,6 @@ dataItems.forEach((item) => {
   } else {
     console.log(`Product : ${item.name}: ${item.price}`);
   }
-});
+});  
+
+console.log('dump')
