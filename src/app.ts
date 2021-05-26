@@ -29,5 +29,3 @@ dataItems.forEach((item) => {
     console.log(`Product : ${item.name}: ${item.price}`);
   }
 });
-
-console.log("d");
