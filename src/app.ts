@@ -18,14 +18,24 @@ type Person = {
 let hat = { id: 1, name: "Hat", price: 100 };
 let gloves = { id: 2, name: "Gloves", price: 75 };
 let umbrella = { id: 3, name: "Umbrella", price: 30 };
-let bob = { id: "bsmith", name: "Bob", city: "London" };
+let bob = { id: "smith", name: "Bob", city: "London" };
 
 let dataItems: (Product | Person)[] = [hat, gloves, umbrella, bob];
 
+// dataItems.forEach((item) => {
+//   if ("city" in item) {
+//     console.log(`Person : ${item.name}: ${item.city}`);
+//   } else {
+//     console.log(`Product : ${item.name}: ${item.price}`);
+//   }
+// });
+
 dataItems.forEach((item) => {
-  if ("city" in item) {
-    console.log(`Person : ${item.name}: ${item.city}`);
-  } else {
+  if ("price" in item) {
+    // console.log(`Person : ${item.name}: ${item.city}`);
     console.log(`Product : ${item.name}: ${item.price}`);
+  } else {
+    // console.log(`Product : ${item.name}: ${item.price}`);
+    console.log(`Person : ${item.name}: ${item.city}`);
   }
 });
