@@ -4,6 +4,7 @@ declare type Person = {
     city: string;
 };
 declare type Employee = {
+    id: string;
     company: string;
     dept: string;
 };

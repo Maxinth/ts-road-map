@@ -1,10 +1,11 @@
 type Person = {
-  id: string; // id is string
+  id: string;
   name: string;
   city: string;
 };
 
 type Employee = {
+  id: string;
   company: string;
   dept: string;
 };
