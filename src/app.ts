@@ -8,17 +8,18 @@ type Employee = {
   company: string;
   dept: string;
 };
-let bob: Person & Employee = {
+
+let bob = {
   id: "smith",
   name: "Bob",
   city: "London",
   company: "Acme Co",
-  dept: "Sales",
+  dept: "🔥",
 };
 
 let dataItems: (Person & Employee)[] = [bob];
 
 dataItems.forEach((item) => {
   console.log(`Person: ${item.id}, ${item.name}`);
-  console.log(`Employees: ${item.id}, ${item.company}`);
+  console.log(`Employees: ${item.id}, ${item.dept}`);
 });
