@@ -8,7 +8,7 @@ type Employee = {
   company: string;
   dept: string;
 };
-let bob = {
+let bob: Person & Employee = {
   id: "smith",
   name: "Bob",
   city: "London",
