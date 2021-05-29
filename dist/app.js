@@ -8,20 +8,15 @@ let gloves = { id: 2, name: "Gloves", price: 75 };
 let umbrella = { id: 3, name: "Umbrella", price: 30 };
 let bob = { id: "smith", name: "Bob", city: "London" };
 let dataItems = [hat, gloves, umbrella, bob];
-// dataItems.forEach((item) => {
-//   if ("city" in item) {
-//     console.log(`Person : ${item.name}: ${item.city}`);
-//   } else {
-//     console.log(`Product : ${item.name}: ${item.price}`);
-//   }
-// });
+// predicate function
+function isPerson(testObj) {
+    return testObj.city !== undefined;
+}
 dataItems.forEach((item) => {
-    if ("price" in item) {
-        // console.log(`Person : ${item.name}: ${item.city}`);
-        console.log(`Product : ${item.name}: ${item.price}`);
+    if (isPerson(item)) {
+        console.log(`Person : ${item.name}: ${item.city}`);
     }
     else {
-        // console.log(`Product : ${item.name}: ${item.price}`);
-        console.log(`Person : ${item.name}: ${item.city}`);
+        console.log(`Product : ${item.name}: ${item.price}`);
     }
 });

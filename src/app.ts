@@ -22,20 +22,14 @@ let bob = { id: "smith", name: "Bob", city: "London" };
 
 let dataItems: (Product | Person)[] = [hat, gloves, umbrella, bob];
 
-// dataItems.forEach((item) => {
-//   if ("city" in item) {
-//     console.log(`Person : ${item.name}: ${item.city}`);
-//   } else {
-//     console.log(`Product : ${item.name}: ${item.price}`);
-//   }
-// });
-
+// predicate function
+function isPerson(testObj: any): testObj is Person {
+  return testObj.city !== undefined;
+}
 dataItems.forEach((item) => {
-  if ("price" in item) {
-    // console.log(`Person : ${item.name}: ${item.city}`);
-    console.log(`Product : ${item.name}: ${item.price}`);
-  } else {
-    // console.log(`Product : ${item.name}: ${item.price}`);
+  if (isPerson(item)) {
     console.log(`Person : ${item.name}: ${item.city}`);
+  } else {
+    console.log(`Product : ${item.name}: ${item.price}`);
   }
 });
