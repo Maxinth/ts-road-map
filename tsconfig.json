@@ -7,9 +7,9 @@
     // "watch": true,
     "module": "commonjs",
     // "noImplicitAny": true,
-    "strictNullChecks": true,
-    "declaration": true,
-    "suppressExcessPropertyErrors": true
+    // "strictNullChecks": true,
+    "declaration": true
+    // "suppressExcessPropertyErrors": true
     // "lib": ["es5", "dom", "es2015.collection"]
   }
 }
