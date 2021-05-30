@@ -5,7 +5,7 @@ let person1 = {
     city: "London",
     company: "Acme Co",
     dept: "Sales",
-    contact: "Alice",
+    contact: { name: "Alice", phone: 6512346543 },
 };
 let person2 = {
     id: "dpeters",
@@ -13,5 +13,5 @@ let person2 = {
     city: "New York",
     company: "Acme Co",
     dept: "Development",
-    contact: 6512346543,
+    contact: { name: "Alice", phone: 6512346543 },
 };

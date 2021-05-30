@@ -2,13 +2,13 @@ type Person = {
   id: string;
   name: string;
   city: string;
-  contact: number;
+  contact: { phone: number };
 };
 type Employee = {
   id: string;
   company: string;
   dept: string;
-  contact: string;
+  contact: { name: string };
 };
 
 type EmployedPerson = Person & Employee;
@@ -20,7 +20,7 @@ let person1: EmployedPerson = {
   city: "London",
   company: "Acme Co",
   dept: "Sales",
-  contact: "Alice",
+  contact: { name: "Alice", phone: 6512346543 },
 };
 
 let person2: EmployedPerson = {
@@ -29,5 +29,5 @@ let person2: EmployedPerson = {
   city: "New York",
   company: "Acme Co",
   dept: "Development",
-  contact: 6512346543,
+  contact: { name: "Alice", phone: 6512346543 },
 };
