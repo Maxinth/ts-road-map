@@ -1,15 +1,8 @@
-let person = {
-    id: "smith",
-    name: "Bob Smith",
-    city: "London",
-    company: "Acme Co",
-    dept: "Sales",
-    getContact(field) {
-        return typeof field === "string" ? "Alice" : 6512346543;
-    },
-};
-let typeTest = person.getContact;
-let stringParamTypeTest = person.getContact("Alice");
-let numberParamTypeTest = person.getContact(123);
-console.log(`Contact: ${person.getContact("Alice")}`);
-console.log(`Contact: ${person.getContact(12)}`);
+let data = [
+    { id: "bsmith", name: "Bob Smith", city: "London" },
+    { id: "ajones", name: "Alice Jones", city: "Paris" },
+    { id: "dpeters", name: "Dora Peters", city: "New York" },
+];
+data.forEach((item) => {
+    console.log(`${item.id} ${item.name} ${item.city}`);
+});
