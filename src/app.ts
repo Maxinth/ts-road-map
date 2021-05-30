@@ -34,9 +34,28 @@ let employees: Employee[] = [
 ];
 
 let dataItems: EmployedPerson[] = correlateData(people, employees);
-// console.log(dataItems);
+
+function writePerson(per: Person): void {
+  console.log(`Person: ${per.id}, ${per.name} ${per.city}`);
+}
+
+function writeEmployees(emp: Employee): void {
+  console.log(`Employees: ${emp.id} ${emp.company} ${emp.dept}`);
+}
 
 dataItems.forEach((item) => {
-  console.log(`Person: ${item.id}, ${item.name}, ${item.city}`);
-  console.log(`Employee: ${item.id}, ${item.company}, ${item.dept}`);
+  writePerson(item);
+  writeEmployees(item);
 });
+
+/**
+ * writePerson expects an argument whose type is Person
+ * writeEmployees also expects an argument whose type is Employee
+ *
+ * In the forEach callback, item whose type is EmployedPerson is passed in to both
+ * functions
+ * 
+
+Because an intersection combines features from multiple types, an object that conforms to the intersection 
+shape also conforms to each of the types in the intersection.
+ */
