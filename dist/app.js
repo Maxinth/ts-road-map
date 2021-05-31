@@ -1,10 +1,13 @@
-class Employee {
-    /**
-     * the access control keywords makes the initialization work in
-     this short and improved Class definition using ts.
-  
-     */
+class Person {
+    constructor(id, name, city) {
+        this.id = id;
+        this.name = name;
+        this.city = city;
+    }
+}
+class Employee extends Person {
     constructor(id, name, dept, city) {
+        super(id, name, city);
         this.id = id;
         this.name = name;
         this.dept = dept;
@@ -14,5 +17,13 @@ class Employee {
         console.log(`${this.name} works in ${this.dept} department`);
     }
 }
-let salesEmployee = new Employee("fvega", "Fidel Vega", "Sales", "Paris");
-salesEmployee.writeDept();
+let data = [
+    new Person("smith", "Bob Smith", "London"),
+    new Employee("auto", "Smart Autos", "sales", "paris"),
+];
+data.forEach(item => {
+    console.log(`Person: ${item.name}, ${item.city}`);
+    if (item instanceof Employee) {
+        item.writeDept();
+    }
+});
