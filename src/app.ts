@@ -25,5 +25,5 @@ class Employee {
 let salesEmployee = new Employee("fvega", "Fidel Vega", "Sales", "Paris");
 
 salesEmployee.writeDept();
-salesEmployee.id = "Auto";
+salesEmployee.id = "Auto"; // property is readonly and so, it can't be changed.
 console.log(salesEmployee);
