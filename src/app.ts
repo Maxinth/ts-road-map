@@ -50,4 +50,4 @@ data.forEach((item) => {
   } else if (item instanceof Supplier) {
     console.log(`Supplier ${item.name} works for ${item.companyName}`);
   }
-});
+}); 
