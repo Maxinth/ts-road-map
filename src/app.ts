@@ -35,7 +35,7 @@ class Supplier extends Person {
     super(id, name, city);
   }
 }
-let data = [
+let data:Person[] = [
   new Employee("fvega", "Fidel Vega", "Sales", "Paris"),
   new Customer("ajones", "Alice Jones", "London", 500),
 ];
