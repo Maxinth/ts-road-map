@@ -12,3 +12,5 @@ class Employee {
 }
 let salesEmployee = new Employee("fvega", "Fidel Vega", "Sales", "Paris");
 salesEmployee.writeDept();
+salesEmployee.id = "Auto";
+console.log(salesEmployee);
