@@ -20,16 +20,12 @@ class Employee extends Person {
         return `works in ${this.dept}`;
     }
 }
-class Customer extends Person {
+class Customer {
     constructor(id, name, city, creditLimit) {
-        super(id, name, city);
         this.id = id;
         this.name = name;
         this.city = city;
         this.creditLimit = creditLimit;
-    }
-    getSpecificDetails() {
-        return `has ${this.creditLimit} limit`;
     }
 }
 class Supplier extends Person {
@@ -49,4 +45,11 @@ let data = [
     new Customer("ajones", "Alice Jones", "London", 500),
 ];
 data.push(new Supplier("dpeters", "Dora Peters", "New York", "Acme"));
-data.forEach((item) => console.log(item.getDetails()));
+data.forEach((item) => {
+    if (item instanceof Person) {
+        console.log(item.getDetails());
+    }
+    else {
+        console.log(`Customer: ${item.name}`);
+    }
+});
