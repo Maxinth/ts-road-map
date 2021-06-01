@@ -10,11 +10,12 @@ class Employee {
     }
 }
 class Customer {
-    constructor(id, name, city, creditLimit) {
+    constructor(id, name, city, creditLimit, dogName) {
         this.id = id;
         this.name = name;
         this.city = city;
         this.creditLimit = creditLimit;
+        this.dogName = dogName;
     }
     getDetails() {
         return `${this.name} has ${this.creditLimit} limit`;
