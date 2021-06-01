@@ -1,5 +1,13 @@
-class Person {
+abstract class Person {
   constructor(public id: string, public name: string, public city: string) {}
+  getDetails(): string {
+    return `${this.name} ${this.getSpecificDetails()}`;
+  }
+
+  // abstract method MUST exist between abstract classes
+  // and must be implemented by all classes extending the abstract class
+  // i.e Employee, Customer, Supplier
+  abstract getSpecificDetails(): string;
 }
 class Employee extends Person {
   constructor(
@@ -10,8 +18,8 @@ class Employee extends Person {
   ) {
     super(id, name, city);
   }
-  writeDept() {
-    console.log(`${this.name} works in ${this.dept}`);
+  getSpecificDetails() {
+    return `works in ${this.dept}`;
   }
 }
 class Customer extends Person {
@@ -23,6 +31,9 @@ class Customer extends Person {
   ) {
     super(id, name, city);
   }
+  getSpecificDetails() {
+    return `has ${this.creditLimit} limit`;
+  }
 }
 class Supplier extends Person {
   constructor(
@@ -33,6 +44,9 @@ class Supplier extends Person {
   ) {
     super(id, name, city);
   }
+  getSpecificDetails() {
+    return `works for ${this.companyName}`;
+  }
 }
 let data: Person[] = [
   new Employee("fvega", "Fidel Vega", "Sales", "Paris"),
@@ -40,13 +54,4 @@ let data: Person[] = [
 ];
 data.push(new Supplier("dpeters", "Dora Peters", "New York", "Acme"));
 
-data.forEach((item) => {
-  console.log(`Person: ${item.name}, ${item.city}`);
-  if (item instanceof Employee) {
-    item.writeDept();
-  } else if (item instanceof Customer) {
-    console.log(`Customer ${item.name} has ${item.creditLimit} limit`);
-  } else if (item instanceof Supplier) {
-    console.log(`Supplier ${item.name} works for ${item.companyName}`);
-  }
-});
+data.forEach((item) => console.log(item.getDetails()));
