@@ -22,5 +22,8 @@ declare class Customer implements Person, DogOwner {
     dogName: string;
     constructor(id: string, name: string, city: string, creditLimit: number, dogName: string);
     getDetails(): string;
+    getDogDetails(): string;
 }
+declare let alice: Customer;
+declare let dogOwners: DogOwner[];
 declare let data: Person[];

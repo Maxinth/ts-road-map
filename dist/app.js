@@ -16,15 +16,17 @@ class Customer {
         this.city = city;
         this.creditLimit = creditLimit;
         this.dogName = dogName;
+        // no statements required
     }
     getDetails() {
         return `${this.name} has ${this.creditLimit} limit`;
     }
+    getDogDetails() {
+        return `${this.name} has a dog named ${this.dogName}`;
+    }
 }
-let data = [
-    new Employee("fvega", "Fidel Vega", "Sales", "Paris"),
-    new Customer("ajones", "Alice Jones", "London", 500),
-];
-data.forEach((item) => {
-    console.log(item.getDetails());
-});
+let alice = new Customer("ajones", "Alice Jones", "London", 500, "Fido");
+let dogOwners = [alice];
+dogOwners.forEach(item => console.log(item.getDogDetails()));
+let data = [new Employee("fvega", "Fidel Vega", "Sales", "Paris"), alice];
+data.forEach(item => console.log(item.getDetails()));

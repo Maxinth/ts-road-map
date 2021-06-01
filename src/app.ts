@@ -21,10 +21,10 @@ class Employee implements Person {
 class Customer implements Person, DogOwner {
     constructor(public readonly id: string, public name: string,
             public city: string, public creditLimit: number,
-            public dogName ) {
+            public dogName:string ) {
         // no statements required
-    }
-    getDetails() {
+  }
+  getDetails() {
         return `${this.name} has ${this.creditLimit} limit`;
     }
     getDogDetails() {
