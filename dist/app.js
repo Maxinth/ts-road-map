@@ -14,7 +14,7 @@ class Employee extends Person {
         this.city = city;
     }
     writeDept() {
-        console.log(`${this.name} works in ${this.dept} department`);
+        console.log(`${this.name} works in ${this.dept}`);
     }
 }
 class Customer extends Person {

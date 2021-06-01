@@ -10,9 +10,8 @@ class Employee extends Person {
   ) {
     super(id, name, city);
   }
-
   writeDept() {
-    console.log(`${this.name} works in ${this.dept} department`);
+    console.log(`${this.name} works in ${this.dept}`);
   }
 }
 class Customer extends Person {
@@ -35,7 +34,7 @@ class Supplier extends Person {
     super(id, name, city);
   }
 }
-let data:Person[] = [
+let data = [
   new Employee("fvega", "Fidel Vega", "Sales", "Paris"),
   new Customer("ajones", "Alice Jones", "London", 500),
 ];
@@ -50,4 +49,4 @@ data.forEach((item) => {
   } else if (item instanceof Supplier) {
     console.log(`Supplier ${item.name} works for ${item.companyName}`);
   }
-}); 
+});

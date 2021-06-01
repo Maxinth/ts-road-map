@@ -26,4 +26,4 @@ declare class Supplier extends Person {
     companyName: string;
     constructor(id: string, name: string, city: string, companyName: string);
 }
-declare let data: Person[];
+declare let data: (Employee | Customer)[];
