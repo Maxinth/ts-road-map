@@ -1,24 +1,31 @@
-class AbstractDogOwner {
-    getDogDetails() {
-        if (this.dogName) {
-            return `${this.name} has a dog called ${this.dogName}`;
-        }
-    }
-}
-class DogOwningCustomer extends AbstractDogOwner {
-    constructor(id, name, city, creditLimit, dogName) {
-        super();
-        this.id = id;
+class Employee {
+    constructor(name, company) {
         this.name = name;
-        this.city = city;
-        this.creditLimit = creditLimit;
-        this.dogName = dogName;
+        this.company = company;
+        // no statements required
     }
     getDetails() {
-        return `${this.name} has ${this.creditLimit} limit`;
+        return `${this.name} works for ${this.company}`;
     }
 }
-let alice = new DogOwningCustomer("ajones", "Alice Jones", "London", 500, "Fido");
-if (alice.getDogDetails) {
-    console.log(alice.getDogDetails());
+class SportsProduct {
+    constructor(name, category, price) {
+        this.name = name;
+        this.category = category;
+        this.price = price;
+        // no statements required
+    }
 }
+let data = [
+    new Employee("Bob Smith", "Acme"),
+    new SportsProduct("Running Shoes", "Running", 90.5),
+    new Employee("Dora Peters", "BigCo"),
+];
+data.forEach((item) => {
+    if ("getDetails" in item) {
+        console.log(`Person: ${item.getDetails()}`);
+    }
+    else {
+        console.log(`Product: ${item.name}, ${item.price}`);
+    }
+});
