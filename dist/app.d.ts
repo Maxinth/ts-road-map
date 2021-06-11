@@ -1,6 +1,12 @@
 /**
  * Mastering typeScript
  */
-declare const userName: string;
-declare const Password: string;
-declare const testName: boolean;
+declare var obj1: {
+    id: number;
+    print(): void;
+};
+declare var obj2: {
+    id: number;
+    print(): void;
+    select(): void;
+};

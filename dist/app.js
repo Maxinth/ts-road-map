@@ -1,7 +1,7 @@
 /**
  * Mastering typeScript
  */
-var userName = "Emmy";
-var Password = "Emm";
-var testName = userName === Password;
-console.log(testName);
+var obj1 = { id: 1, print: function () { } };
+var obj2 = { id: 2, print: function () { }, select: function () { } };
+obj1 = obj2;
+obj2 = obj1;
