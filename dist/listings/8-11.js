@@ -1,3 +1,4 @@
+"use strict";
 /* Using Functions */
 /*
 // functions that return nothing
@@ -8,3 +9,4 @@ function sayHello(firstName: string, lastName: string): void {
 
 sayHello("john", "smith");
 */
+//# sourceMappingURL=8-11.js.map

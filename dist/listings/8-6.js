@@ -1,3 +1,4 @@
+"use strict";
 /*
 function calculateTax(amount, discount) {
   return amount * 1.2 - discount;
@@ -14,3 +15,4 @@ taxValue = calculateTax(100, 10, 20);
 console.log(`3 args: ${taxValue}`);
 
 */
+//# sourceMappingURL=8-6.js.map

@@ -9,3 +9,4 @@ function sum() {
     return vals.reduce(function (total, val) { return (total += val); });
 }
 exports.sum = sum;
+//# sourceMappingURL=calc.js.map

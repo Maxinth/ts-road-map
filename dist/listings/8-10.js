@@ -1,3 +1,4 @@
+"use strict";
 /* Using Functions */
 /*
 
@@ -15,3 +16,4 @@ let taxValue = calculateTax(100, 10, 20, 1, 30, 7);
 console.log(`6 args: ${taxValue}`);
 
 */
+//# sourceMappingURL=8-10.js.map

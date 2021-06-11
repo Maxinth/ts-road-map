@@ -1,3 +1,4 @@
+"use strict";
 /* Using Functions */
 /*
 // functions type overload
@@ -18,3 +19,4 @@ writeValue("Tax value", taxAmount);
 //}
 
 */
+//# sourceMappingURL=8-12.js.map

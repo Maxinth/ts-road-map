@@ -1,3 +1,4 @@
+"use strict";
 /* Using Functions */
 /*
 // optional parameters
@@ -15,3 +16,4 @@ console.log(`1 arg: ${taxValue}`);
 
 
 */
+//# sourceMappingURL=8-7.js.map

@@ -1,3 +1,4 @@
+"use strict";
 // // Asserting a non-null value
 /*
 function calculateTax(amount: number, format: boolean): string | number | null {
@@ -24,3 +25,4 @@ if (taxValue !== null) {
 }
 
 */
+//# sourceMappingURL=7-35.js.map
