@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esNext",
+    "target": "es3",
     "outDir": "./dist",
     "rootDir": "./src",
     // "noEmitOnError": true,
