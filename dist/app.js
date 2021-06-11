@@ -2,9 +2,7 @@
 /**
  * Mastering typeScript
  */
-function printString(a) {
-    console.log(a);
-}
-var returnedValue = printString("This is a string");
-printString;
-//# sourceMappingURL=app.js.map
+var item1 = { id: 1, name: "item1" };
+console.log(item1);
+item1 = { id: 2 };
+console.log(item1);

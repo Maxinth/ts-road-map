@@ -2,12 +2,8 @@
  * Mastering typeScript
  */
 
-function printString(a: string): void {
-  console.log(a);
-}
+var item1 = <any>{ id: 1, name: "item1" };
+console.log(item1);
+item1 = { id: 2 };
 
-var returnedValue: string = printString(
-  "This is a string"
-) as unknown as string;
-
-printString;
+console.log(item1);
