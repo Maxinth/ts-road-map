@@ -2,7 +2,7 @@
  * Mastering typeScript
  */
 
-var item1 = <any>{ id: 1, name: "item1" };
+var item1 = { id: 1, name: "item1" } as any;
 console.log(item1);
 item1 = { id: 2 };
 
