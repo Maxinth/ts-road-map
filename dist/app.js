@@ -1,6 +1,7 @@
 /**
  * Mastering typeScript
  */
-console.log("hello typescript");
-var version = "es6";
-console.log("hello " + version + " Typescript");
+var userName = "Emmy";
+var Password = "Emm";
+var testName = userName === Password;
+console.log(testName);
