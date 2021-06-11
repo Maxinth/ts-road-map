@@ -1,7 +1,8 @@
 /**
  * Mastering typeScript
  */
-var obj1 = { id: 1, print: function () { } };
-var obj2 = { id: 2, print: function () { }, select: function () { } };
-obj1 = obj2;
-obj2 = obj1;
+function calculate(a, b, c) {
+    return a * b + c;
+}
+console.log("Calculate(2 ,3 ,1) = " + calculate(2, 3, 1));
+// console.log(`Calculate("2", "3", "1") =  ${calculate("2", "3", "1")}`);
