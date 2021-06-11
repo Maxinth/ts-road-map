@@ -2,9 +2,12 @@
  * Mastering typeScript
  */
 
-function calculate(a: number, b: number, c: number): number {
-  return a * b + c;
+function printString(a: string): void {
+  console.log(a);
 }
 
-console.log("Calculate(2 ,3 ,1) = " + calculate(2, 3, 1));
-// console.log(`Calculate("2", "3", "1") =  ${calculate("2", "3", "1")}`);
+var returnedValue: string = printString(
+  "This is a string"
+) as unknown as string;
+
+printString;

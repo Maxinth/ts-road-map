@@ -1,8 +1,8 @@
 /**
  * Mastering typeScript
  */
-function calculate(a, b, c) {
-    return a * b + c;
+function printString(a) {
+    console.log(a);
 }
-console.log("Calculate(2 ,3 ,1) = " + calculate(2, 3, 1));
-// console.log(`Calculate("2", "3", "1") =  ${calculate("2", "3", "1")}`);
+var returnedValue = printString("This is a string");
+printString;

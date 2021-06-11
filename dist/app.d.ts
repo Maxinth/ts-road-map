@@ -1,4 +1,5 @@
 /**
  * Mastering typeScript
  */
-declare function calculate(a: number, b: number, c: number): number;
+declare function printString(a: string): void;
+declare var returnedValue: string;
