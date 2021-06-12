@@ -2,8 +2,11 @@
  * Mastering typeScript
  */
 
-var item1 = { id: 1, name: "item1" } as any;
-console.log(item1);
-item1 = { id: 2 };
+var index: number = 0;
 
-console.log(item1);
+if (index == 0) {
+  var index: number = 2;
+  console.log(`index = ${index}`);
+}
+
+console.log(`index = ${index}`);
