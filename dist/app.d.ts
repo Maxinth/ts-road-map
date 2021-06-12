@@ -1,4 +1,4 @@
 /**
  * Mastering typeScript
  */
-declare let index: number;
+declare const constValue = "this should not be changed";
