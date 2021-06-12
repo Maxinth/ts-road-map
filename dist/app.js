@@ -2,8 +2,6 @@
 /**
  * Mastering typeScript
  */
-function printObject(obj) {
-    console.log("obj = " + obj);
+function addWithUnion(arg1, arg2) {
+    return arg1 + arg2;
 }
-printObject(1);
-printObject("string value");

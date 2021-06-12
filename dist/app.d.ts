@@ -1,4 +1,5 @@
 /**
  * Mastering typeScript
  */
-declare function printObject(obj: string | number): void;
+declare type SorN = string | number;
+declare function addWithUnion(arg1: SorN, arg2: SorN): any;
