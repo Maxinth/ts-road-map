@@ -1,4 +1,4 @@
 /**
  * Mastering typeScript
  */
-declare const constValue = "this should not be changed";
+declare function printObject(obj: string | number): void;
