@@ -1,4 +1,4 @@
 /**
  * Mastering typeScript
  */
-declare var index: number;
+declare let index: number;
