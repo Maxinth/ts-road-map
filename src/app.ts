@@ -2,8 +2,9 @@
  * Mastering typeScript
  */
 enum DoorState {
-  Open,
-  Closed,
+  Open = 7,
+  Closed = 5,
+  Unspecified,
 }
 
 function checkDoorState(state: DoorState): void {

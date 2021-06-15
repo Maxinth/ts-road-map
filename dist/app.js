@@ -4,8 +4,9 @@
  */
 var DoorState;
 (function (DoorState) {
-    DoorState[DoorState["Open"] = 0] = "Open";
-    DoorState[DoorState["Closed"] = 1] = "Closed";
+    DoorState[DoorState["Open"] = 7] = "Open";
+    DoorState[DoorState["Closed"] = 5] = "Closed";
+    DoorState[DoorState["Unspecified"] = 6] = "Unspecified";
 })(DoorState || (DoorState = {}));
 function checkDoorState(state) {
     console.log("enum value is : " + state);
