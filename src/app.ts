@@ -1,22 +1,22 @@
 /**
  * Mastering typeScript
  */
-enum DoorState {
-  OPEN = "Open",
-  CLOSED = "Closed",
+const enum DoorState {
+  Open = 10,
+  Closed = 20,
 }
 
 function checkDoorState(state: DoorState): void {
   console.log(`enum value is : ${state}`);
   switch (state) {
-    case DoorState.OPEN:
+    case DoorState.Open:
       console.log(`door is open`);
       break;
-    case DoorState.CLOSED:
+    case DoorState.Closed:
       console.log(`door is closed`);
       break;
   }
 }
 
-checkDoorState(DoorState.CLOSED);
-checkDoorState(DoorState.OPEN);
+checkDoorState(DoorState.Closed);
+checkDoorState(DoorState.Open);
