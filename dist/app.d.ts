@@ -1,10 +1,4 @@
 /**
  * Mastering typeScript
  */
-interface Obj {
-    nestedProperty: {
-        name: string;
-    };
-}
-declare let objectA: Obj;
-declare function printNestedObject(obj: Obj): void;
+declare function nullishCheck(a: number | undefined | null): void;

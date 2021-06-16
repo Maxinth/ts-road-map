@@ -2,33 +2,10 @@
  * Mastering typeScript
  */
 
-interface Obj {
-  nestedProperty: {
-    name: string;
-  };
+function nullishCheck(a: number | undefined | null): void {
+  console.log(`a : ${a ?? `undefined or null`}`);
 }
 
-let objectA: Obj = {
-  nestedProperty: {
-    name: "nestedPropertyName",
-  },
-};
-
-function printNestedObject(obj: Obj) {
-  if (obj?.nestedProperty?.name) {
-    console.log("name = " + obj.nestedProperty.name);
-  } else {
-    console.log("name was not found or undefined");
-  }
-}
-
-printNestedObject(undefined);
-printNestedObject({
-  aProperty: "another property",
-});
-printNestedObject({
-  nestedProperty: {
-    name: null,
-  },
-});
-printNestedObject(objectA);
+nullishCheck(1);
+nullishCheck(null);
+nullishCheck(undefined);
