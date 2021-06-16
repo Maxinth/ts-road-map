@@ -7,7 +7,8 @@ interface Obj {
     name: string;
   };
 }
-var objectA = {
+
+let objectA: Obj = {
   nestedProperty: {
     name: "nestedPropertyName",
   },
@@ -18,3 +19,4 @@ function printNestedObject(obj: Obj) {
 }
 
 printNestedObject(objectA);
+printNestedObject({});

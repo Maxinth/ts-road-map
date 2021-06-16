@@ -6,9 +6,5 @@ interface Obj {
         name: string;
     };
 }
-declare var objectA: {
-    nestedProperty: {
-        name: string;
-    };
-};
+declare let objectA: Obj;
 declare function printNestedObject(obj: Obj): void;
