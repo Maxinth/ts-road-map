@@ -2,7 +2,19 @@
  * Mastering typeScript
  */
 
-const value: number = 10;
-const message: string =
-  value > 10 ? "value is larger than 10" : "value is less or 10";
-console.log(message);
+interface Obj {
+  nestedProperty: {
+    name: string;
+  };
+}
+var objectA = {
+  nestedProperty: {
+    name: "nestedPropertyName",
+  },
+};
+
+function printNestedObject(obj: Obj) {
+  console.log("object.nestedProperty.name = " + obj.nestedProperty.name);
+}
+
+printNestedObject(objectA);

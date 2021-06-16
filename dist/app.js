@@ -2,6 +2,12 @@
 /**
  * Mastering typeScript
  */
-var value = 10;
-var message = value > 10 ? "value is larger than 10" : "value is less or 10";
-console.log(message);
+var objectA = {
+    nestedProperty: {
+        name: "nestedPropertyName"
+    }
+};
+function printNestedObject(obj) {
+    console.log("object.nestedProperty.name = " + obj.nestedProperty.name);
+}
+printNestedObject(objectA);

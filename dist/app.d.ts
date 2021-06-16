@@ -1,5 +1,14 @@
 /**
  * Mastering typeScript
  */
-declare const value: number;
-declare const message: string;
+interface Obj {
+    nestedProperty: {
+        name: string;
+    };
+}
+declare var objectA: {
+    nestedProperty: {
+        name: string;
+    };
+};
+declare function printNestedObject(obj: Obj): void;
