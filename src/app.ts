@@ -15,8 +15,20 @@ let objectA: Obj = {
 };
 
 function printNestedObject(obj: Obj) {
-  console.log("object.nestedProperty.name = " + obj.nestedProperty.name);
+  if (obj?.nestedProperty?.name) {
+    console.log("name = " + obj.nestedProperty.name);
+  } else {
+    console.log("name was not found or undefined");
+  }
 }
 
+printNestedObject(undefined);
+printNestedObject({
+  aProperty: "another property",
+});
+printNestedObject({
+  nestedProperty: {
+    name: null,
+  },
+});
 printNestedObject(objectA);
-printNestedObject({});
