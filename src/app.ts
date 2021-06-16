@@ -1,22 +1,11 @@
 /**
  * Mastering typeScript
  */
-const enum DoorState {
-  Open = 10,
-  Closed = 20,
-}
 
-function checkDoorState(state: DoorState): void {
-  console.log(`enum value is : ${state}`);
-  switch (state) {
-    case DoorState.Open:
-      console.log(`door is open`);
-      break;
-    case DoorState.Closed:
-      console.log(`door is closed`);
-      break;
-  }
-}
+let list = ["123", "456", "789"];
 
-checkDoorState(DoorState.Closed);
-checkDoorState(DoorState.Open);
+delete list[0];
+
+for (let i = 0; i < list.length; i++) {
+  console.log(`list[${i}]  = ${list[i]}`);
+}
