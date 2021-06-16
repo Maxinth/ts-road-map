@@ -2,10 +2,6 @@
  * Mastering typeScript
  */
 
-function nullishCheck(a: number | undefined | null): void {
-  console.log(`a : ${a ?? `undefined or null`}`);
+function testNullOperands(a: number, b: number | null | undefined) {
+  let addResult = a + (b ?? 0);
 }
-
-nullishCheck(1);
-nullishCheck(null);
-nullishCheck(undefined);

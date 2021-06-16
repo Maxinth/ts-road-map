@@ -2,9 +2,6 @@
 /**
  * Mastering typeScript
  */
-function nullishCheck(a) {
-    console.log("a : " + (a !== null && a !== void 0 ? a : "undefined or null"));
+function testNullOperands(a, b) {
+    var addResult = a + (b !== null && b !== void 0 ? b : 0);
 }
-nullishCheck(1);
-nullishCheck(null);
-nullishCheck(undefined);
