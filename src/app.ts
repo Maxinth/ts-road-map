@@ -2,9 +2,7 @@
  * Mastering typeScript
  */
 
-function printValues(a: number | null) {
-  console.log(`a: ${a}`);
-}
-
-printValues(1);
-printValues(null);
+const value: number = 10;
+const message: string =
+  value > 10 ? "value is larger than 10" : "value is less or 10";
+console.log(message);

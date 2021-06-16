@@ -1,4 +1,5 @@
 /**
  * Mastering typeScript
  */
-declare function printValues(a: number | null): void;
+declare const value: number;
+declare const message: string;
