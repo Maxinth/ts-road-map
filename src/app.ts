@@ -2,18 +2,9 @@
  * Mastering typeScript
  */
 
-let list = ["123", "456", "789"];
-
-delete list[0];
-
-for (let i = 0; i < list.length; i++) {
-  checkAndPrintElement(list[i]);
+function printValues(a: number | null) {
+  console.log(`a: ${a}`);
 }
 
-function checkAndPrintElement(arrElement: string | undefined): void {
-  if (arrElement === undefined) {
-    console.log(`invalid array element`);
-  } else {
-    console.log(`valid array element: ${arrElement}`);
-  }
-}
+printValues(1);
+printValues(null);

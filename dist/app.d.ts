@@ -1,5 +1,4 @@
 /**
  * Mastering typeScript
  */
-declare let list: string[];
-declare function checkAndPrintElement(arrElement: string | undefined): void;
+declare function printValues(a: number | null): void;
