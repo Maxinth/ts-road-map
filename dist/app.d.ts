@@ -1,5 +1,5 @@
 /**
  * Mastering typeScript
  */
-declare let a: any;
-declare let aNumber: number;
+declare let u: unknown;
+declare let aNumber2: number;

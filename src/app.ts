@@ -2,9 +2,9 @@
  * Mastering typeScript
  */
 
-let a: any = "test";
-let aNumber: number = 2;
-
-aNumber = a;
-
-console.log(`aNumber = ${aNumber} and \n typeof aNumber = ${typeof aNumber}`);
+let u: unknown = "an unknown";
+console.log(`type of u = ${typeof u}`);
+u = 1;
+console.log(`type of u = ${typeof u}`);
+let aNumber2: number;
+// aNumber2 = u ;

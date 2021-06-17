@@ -2,7 +2,9 @@
 /**
  * Mastering typeScript
  */
-var a = "test";
-var aNumber = 2;
-aNumber = a;
-console.log("aNumber = " + aNumber + " and \n typeof aNumber = " + typeof aNumber);
+var u = "an unknown";
+console.log("type of u = " + typeof u);
+u = 1;
+console.log("type of u = " + typeof u);
+var aNumber2;
+// aNumber2 = u ;
