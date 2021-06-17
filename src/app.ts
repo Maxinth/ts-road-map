@@ -2,15 +2,18 @@
  * Mastering typeScript
  */
 
-// using definite assignment assertion syntax to enforce that location of globalString
-var globalString!: string;
+let structuredObject: object = {
+  name: "myObject",
+  properties: {
+    id: 1,
+    type: "AnObject",
+  },
+};
 
-setGlobalString("this string is set");
-
-console.log(`globalString = ${globalString}`);
-
-function setGlobalString(val: string) {
-  globalString = val;
+function printObjectType(a: object) {
+  console.log(`a: ${JSON.stringify(a)}`);
 }
 
-// console.log(`globalString = ${globalString}`);
+printObjectType(structuredObject);
+printObjectType({});
+printObjectType("");

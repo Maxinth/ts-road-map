@@ -1,5 +1,5 @@
 /**
  * Mastering typeScript
  */
-declare var globalString: string;
-declare function setGlobalString(val: string): void;
+declare let structuredObject: object;
+declare function printObjectType(a: object): void;
