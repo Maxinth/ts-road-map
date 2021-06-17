@@ -2,8 +2,12 @@
  * Mastering typeScript
  */
 
-console.log();
+var globalString: string;
 
-var aValue = 1;
+setGlobalString("this string is set");
 
-console.log(`avalue = ${aValue}`);
+console.log(`globalString = ${globalString}`);
+
+function setGlobalString(val: string) {
+  globalString = val;
+}

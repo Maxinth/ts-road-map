@@ -1,4 +1,5 @@
 /**
  * Mastering typeScript
  */
-declare var aValue: number;
+declare var globalString: string;
+declare function setGlobalString(val: string): void;
