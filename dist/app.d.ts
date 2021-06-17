@@ -1,5 +1,8 @@
 /**
  * Mastering typeScript
  */
-declare let u: unknown;
-declare let aNumber2: number;
+declare enum anEnum {
+    FIRST = 0,
+    SECOND = 1
+}
+declare function getEnumValue(enumValue: anEnum): string;

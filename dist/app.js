@@ -2,9 +2,21 @@
 /**
  * Mastering typeScript
  */
-var u = "an unknown";
-console.log("type of u = " + typeof u);
-u = 1;
-console.log("type of u = " + typeof u);
-var aNumber2;
-// aNumber2 = u;
+var anEnum;
+(function (anEnum) {
+    anEnum[anEnum["FIRST"] = 0] = "FIRST";
+    anEnum[anEnum["SECOND"] = 1] = "SECOND";
+})(anEnum || (anEnum = {}));
+function getEnumValue(enumValue) {
+    switch (enumValue) {
+        case anEnum.FIRST:
+            return "first case";
+        case anEnum.SECOND:
+            return "second case";
+        default:
+            var returnValue = enumValue;
+            return returnValue;
+    }
+}
+getEnumValue(anEnum.FIRST);
+getEnumValue(anEnum.SECOND);
