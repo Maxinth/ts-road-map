@@ -2,6 +2,8 @@
  * Mastering typeScript
  */
 
-function testNullOperands(a: number, b: number | null | undefined) {
-  let addResult = a + (b ?? 0);
-}
+console.log();
+
+var aValue = 1;
+
+console.log(`avalue = ${aValue}`);
