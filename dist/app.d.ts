@@ -1,5 +1,5 @@
 /**
  * Mastering typeScript
  */
-declare let structuredObject: object;
-declare function printObjectType(a: object): void;
+declare let a: any;
+declare let aNumber: number;

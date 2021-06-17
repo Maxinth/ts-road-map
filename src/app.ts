@@ -2,18 +2,9 @@
  * Mastering typeScript
  */
 
-let structuredObject: object = {
-  name: "myObject",
-  properties: {
-    id: 1,
-    type: "AnObject",
-  },
-};
+let a: any = "test";
+let aNumber: number = 2;
 
-function printObjectType(a: object) {
-  console.log(`a: ${JSON.stringify(a)}`);
-}
+aNumber = a;
 
-printObjectType(structuredObject);
-printObjectType({});
-printObjectType("");
+console.log(`aNumber = ${aNumber} and \n typeof aNumber = ${typeof aNumber}`);

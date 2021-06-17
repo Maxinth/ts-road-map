@@ -2,16 +2,7 @@
 /**
  * Mastering typeScript
  */
-var structuredObject = {
-    name: "myObject",
-    properties: {
-        id: 1,
-        type: "AnObject"
-    }
-};
-function printObjectType(a) {
-    console.log("a: " + JSON.stringify(a));
-}
-printObjectType(structuredObject);
-printObjectType({});
-printObjectType("");
+var a = "test";
+var aNumber = 2;
+aNumber = a;
+console.log("aNumber = " + aNumber + " and \n typeof aNumber = " + typeof aNumber);

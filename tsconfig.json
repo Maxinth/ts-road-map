@@ -3,7 +3,7 @@
     "target": "es3",
     "outDir": "./dist",
     "rootDir": "./src",
-    // "noEmitOnError": true,
+    "noEmitOnError": true,
     // "watch": true,
     "strict": true,
     "module": "commonjs",
