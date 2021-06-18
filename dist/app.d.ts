@@ -1,6 +1,6 @@
 /**
  * Mastering typeScript
  */
-declare let objPrec1: object;
-declare let objPrec2: object;
-declare let objPrec3: {};
+declare let firstArray: number[];
+declare let secondArray: number[];
+declare let thirdArray: number[];
