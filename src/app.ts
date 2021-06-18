@@ -2,10 +2,11 @@
  * Mastering typeScript
  */
 
-let tuple1: [string, boolean];
-tuple1 = ["test", true];
+let tupleOptional: [string, boolean?];
+tupleOptional = ["test", true];
+tupleOptional = ["onlyString"];
 
-let [tupleString, tupleBoolean] = tuple1;
+let [tupleString, tupleBoolean] = tupleOptional;
 
 console.log(`tupleString = ${tupleString}`);
 console.log(`tupleBoolean = ${tupleBoolean}`);
