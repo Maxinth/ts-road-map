@@ -6,18 +6,24 @@
 /*
 
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 git add . && git commit -m " " && clear
 
 
 */
 
-function add(a: string, b: string): string;
-function add(a: number, b: number): number;
+type AllowedStringValues = "one" | "two" | "three";
+type AllowedNumericValues = 1 | 20 | 65535;
 
-function add(a: any, b: any) {
-  return a + b;
+function withLiteral(input: AllowedStringValues | AllowedNumericValues): void {
+  console.log(`called with: ${input}`);
 }
 
-add(1, 2);
-add("first", " + second");
+withLiteral("one");
+withLiteral("two");
+withLiteral("three");
+withLiteral("four"); // not allowed
+withLiteral(1);
+withLiteral(20);
+withLiteral(2); // also not allowed
+withLiteral(65535);
