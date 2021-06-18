@@ -2,4 +2,5 @@
  * Mastering typeScript
  */
 declare let firstObj: object;
-declare let secondObj: object;
+declare let idObj: object;
+declare let obj3: {};
