@@ -2,22 +2,8 @@
  * Mastering typeScript
  */
 
-enum anEnum {
-  FIRST,
-  SECOND,
-}
+let firstObj: object = { id: 1, name: "firstObj" };
+let secondObj: object = { ...firstObj };
 
-function getEnumValue(enumValue: anEnum): string {
-  switch (enumValue) {
-    case anEnum.FIRST:
-      return "first case";
-    case anEnum.SECOND:
-      return "second case";
-    default:
-      let returnValue: never = enumValue;
-      return returnValue;
-  }
-}
-
-getEnumValue(anEnum.FIRST);
-getEnumValue(anEnum.SECOND);
+console.log(`secondObj = ${JSON.stringify(secondObj)}`);
+console.log(secondObj);

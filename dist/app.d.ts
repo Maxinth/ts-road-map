@@ -1,8 +1,5 @@
 /**
  * Mastering typeScript
  */
-declare enum anEnum {
-    FIRST = 0,
-    SECOND = 1
-}
-declare function getEnumValue(enumValue: anEnum): string;
+declare let firstObj: object;
+declare let secondObj: object;
