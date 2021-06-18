@@ -2,5 +2,5 @@
  * Mastering typeScript
  *
  */
-declare var myCallback: (text: string) => void;
-declare function withCallbackArg(message: string, callbackFn: Function): void;
+declare function add(a: string, b: string): string;
+declare function add(a: number, b: number): number;

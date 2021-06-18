@@ -3,16 +3,8 @@
  * Mastering typeScript
  *
  */
-/*
-
-git add . && git commit -m " " && clear
-
-*/
-var myCallback = function (text) {
-    console.log("myCallback called with " + text);
-};
-function withCallbackArg(message, callbackFn) {
-    console.log("withCallback called! , message : " + message);
-    callbackFn(message.toUpperCase() + " from withCallback");
+function add(a, b) {
+    return a + b;
 }
-withCallbackArg("initial text", myCallback);
+add(1, 2);
+add("first", " + second");

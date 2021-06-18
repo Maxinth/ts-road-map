@@ -6,16 +6,18 @@
 /*
 
 git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+
 
 */
 
-var myCallback = function (text: string) {
-  console.log("myCallback called with " + text);
-};
+function add(a: string, b: string): string;
+function add(a: number, b: number): number;
 
-function withCallbackArg(message: string, callbackFn: Function) {
-  console.log("withCallback called! , message : " + message);
-  callbackFn(message.toUpperCase() + " from withCallback");
+function add(a: any, b: any) {
+  return a + b;
 }
 
-withCallbackArg("initial text", myCallback);
+add(1, 2);
+add("first", " + second");
