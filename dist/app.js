@@ -7,7 +7,17 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from) {
         to[j] = from[i];
     return to;
 };
-var firstArray = [1, 2, 3];
-var secondArray = [3, 4, 5];
-var thirdArray = __spreadArray(__spreadArray([], firstArray), secondArray);
-console.log("third array = " + thirdArray);
+var objArray1 = [
+    {
+        id: 1,
+        name: "first element"
+    },
+];
+var objArray2 = [
+    {
+        id: 2,
+        name: "second element"
+    },
+];
+var objArray3 = __spreadArray(__spreadArray(__spreadArray([], objArray1), [{ id: 3, name: "third element" }]), objArray2);
+console.log("objArray3 = " + JSON.stringify(objArray3, null, 4));

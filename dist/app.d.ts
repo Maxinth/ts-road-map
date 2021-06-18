@@ -1,6 +1,15 @@
 /**
  * Mastering typeScript
  */
-declare let firstArray: number[];
-declare let secondArray: number[];
-declare let thirdArray: number[];
+declare let objArray1: {
+    id: number;
+    name: string;
+}[];
+declare let objArray2: {
+    id: number;
+    name: string;
+}[];
+declare let objArray3: {
+    id: number;
+    name: string;
+}[];
