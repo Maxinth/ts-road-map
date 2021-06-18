@@ -2,20 +2,8 @@
  * Mastering typeScript
  */
 
-let objArray1 = [
-  {
-    id: 1,
-    name: "first element",
-  },
-];
+let tuple1: [string, boolean];
+tuple1 = ["test", true];
 
-let objArray2 = [
-  {
-    id: 2,
-    name: "second element",
-  },
-];
-
-let objArray3 = [...objArray1, { id: 3, name: "third element" }, ...objArray2];
-
-console.log(`objArray3 = ${JSON.stringify(objArray3, null, 4)}`);
+console.log(`tuple1[0] = ${tuple1[0]}`);
+console.log(`tuple1[1] = ${tuple1[1]}`);
