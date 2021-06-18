@@ -1,4 +1,5 @@
 /**
  * Mastering typeScript
+ *
  */
-declare let tupleRest: [number, ...string[]];
+declare function testArguments(...args: (string | number)[]): void;

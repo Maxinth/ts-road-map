@@ -1,8 +1,19 @@
 /**
  * Mastering typeScript
+ *
  */
 
-let tupleRest: [number, ...string[]];
-tupleRest = [1];
-tupleRest = [1, "string"];
-tupleRest = [2, "string1", "string2", "string3", ""];
+/*
+
+git add . && git commit -m " " && clear
+
+*/
+
+function testArguments(...args: (string | number)[]) {
+  for (let i in args) {
+    console.log(`args[${i}] = ${args[i]}`);
+  }
+}
+
+testArguments(1);
+testArguments("first", "second", "third");
