@@ -8,14 +8,11 @@
 git add . && git commit -m " " && clear
 
 */
-function testArguments() {
-    var args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        args[_i] = arguments[_i];
-    }
-    for (var i in args) {
-        console.log("args[" + i + "] = " + args[i]);
-    }
+var myCallback = function (text) {
+    console.log("myCallback called with " + text);
+};
+function withCallbackArg(message, callbackFn) {
+    console.log("withCallback called! , message : " + message);
+    callbackFn(message.toUpperCase() + " from withCallback");
 }
-testArguments(1);
-testArguments("first", "second", "third");
+withCallbackArg("initial text", myCallback);

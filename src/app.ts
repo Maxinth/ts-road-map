@@ -9,11 +9,13 @@ git add . && git commit -m " " && clear
 
 */
 
-function testArguments(...args: (string | number)[]) {
-  for (let i in args) {
-    console.log(`args[${i}] = ${args[i]}`);
-  }
+var myCallback = function (text: string) {
+  console.log("myCallback called with " + text);
+};
+
+function withCallbackArg(message: string, callbackFn: Function) {
+  console.log("withCallback called! , message : " + message);
+  callbackFn(message.toUpperCase() + " from withCallback");
 }
 
-testArguments(1);
-testArguments("first", "second", "third");
+withCallbackArg("initial text", myCallback);
