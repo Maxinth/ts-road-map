@@ -1,6 +1,6 @@
 /**
  * Mastering typeScript
  */
-declare let firstObj: object;
-declare let idObj: object;
-declare let obj3: {};
+declare let objPrec1: object;
+declare let objPrec2: object;
+declare let objPrec3: {};

@@ -2,9 +2,9 @@
  * Mastering typeScript
  */
 
-let firstObj: object = { name: "nameObj name" };
-let idObj: object = { id: 1 };
+let objPrec1: object = { id: 1, name: "obj1 name" };
+let objPrec2: object = { id: 10001, desc: "obj2 description" };
 
-let obj3 = { ...firstObj, ...idObj };
-console.log(`secondObj = ${JSON.stringify(obj3)}`);
-console.log(obj3);
+let objPrec3 = { ...objPrec1, ...objPrec2 };
+
+console.log(`objectPrec3 = ${JSON.stringify(objPrec3, null, 4)}`);

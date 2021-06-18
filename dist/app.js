@@ -13,8 +13,7 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var firstObj = { name: "nameObj name" };
-var idObj = { id: 1 };
-var obj3 = __assign(__assign({}, firstObj), idObj);
-console.log("secondObj = " + JSON.stringify(obj3));
-console.log(obj3);
+var objPrec1 = { id: 1, name: "obj1 name" };
+var objPrec2 = { id: 10001, desc: "obj2 description" };
+var objPrec3 = __assign(__assign({}, objPrec1), objPrec2);
+console.log("objectPrec3 = " + JSON.stringify(objPrec3, null, 4));
