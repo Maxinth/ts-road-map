@@ -20,3 +20,10 @@ printNameOrValue({
     description: "object description",
     value: 2
 });
+// an object which has both properties
+printNameOrValue({
+    id: 3,
+    name: "implements both",
+    description: "object description",
+    value: 3
+});
