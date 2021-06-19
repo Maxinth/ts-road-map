@@ -11,50 +11,30 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
-
-
-
-
-
-
-
 
 
 */
 
-interface IIdName {
+interface IPerson {
   id: number;
   name: string;
 }
 
-interface IDescrValue {
-  description: string;
-  value: number;
+type PersonPropertyName = keyof IPerson;
+
+function getProperty(key: PersonPropertyName, value: IPerson): void {
+  console.log(`${key} = ${value[key]}`);
 }
 
-function printNameOrValue(obj: IIdName | IDescrValue): void {
-  if ("id" in obj) {
-    console.log(`obj.name = ${obj.name}`);
-  }
-  if ("description" in obj) {
-    console.log(`obj.value = ${obj.value}`);
-  }
-}
-
-printNameOrValue({
+getProperty("id", {
   id: 1,
-  name: "nameValue",
+  name: "firstName",
 });
-printNameOrValue({
-  description: "object description",
-  value: 2,
+getProperty("name", {
+  id: 2,
+  name: "SecondName",
 });
-
-// an object which has both properties
-printNameOrValue({
+getProperty("id", {
   id: 3,
-  name: "implements both",
-  description: "object description",
-  value: 3,
+  name: "thirdName",
 });
