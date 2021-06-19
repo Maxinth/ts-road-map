@@ -10,31 +10,14 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 */
 
-interface IPerson {
+class SimpleClass {
   id: number;
-  name: string;
+  print(): void {
+    console.log(`SimpleClass.print()  called!`);
+  }
 }
-
-type PersonPropertyName = keyof IPerson;
-
-function getProperty(key: PersonPropertyName, value: IPerson): void {
-  console.log(`${key} = ${value[key]}`);
-}
-
-getProperty("id", {
-  id: 1,
-  name: "firstName",
-});
-getProperty("name", {
-  id: 2,
-  name: "SecondName",
-});
-getProperty("id", {
-  id: 3,
-  name: "thirdName",
-});
