@@ -8,7 +8,7 @@
 
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
@@ -16,6 +16,7 @@ git add . && git commit -m " " && clear
 */
 var SimpleClass = /** @class */ (function () {
     function SimpleClass() {
+        this.id = 73;
     }
     SimpleClass.prototype.print = function () {
         console.log("SimpleClass.print()  called!");
@@ -25,3 +26,4 @@ var SimpleClass = /** @class */ (function () {
 var myClass = new SimpleClass();
 myClass.id = 3;
 myClass.print();
+console.log(myClass.id);
