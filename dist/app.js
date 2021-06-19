@@ -23,7 +23,17 @@ var ClassB = /** @class */ (function () {
     };
     return ClassB;
 }());
+var ClassC = /** @class */ (function () {
+    function ClassC() {
+    }
+    ClassC.prototype.print = function () {
+        console.log("classC.print() called!");
+    };
+    return ClassC;
+}());
 var instanceOfClassA = new ClassA();
 var instanceOfClassB = new ClassB();
+var instanceOfClassC = new ClassC();
 printClass(instanceOfClassA);
 printClass(instanceOfClassB);
+printClass(instanceOfClassC);

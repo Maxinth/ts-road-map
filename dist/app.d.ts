@@ -13,5 +13,9 @@ declare class ClassA implements IPrint {
 declare class ClassB implements IPrint {
     print(): void;
 }
+declare class ClassC {
+    print(): void;
+}
 declare let instanceOfClassA: ClassA;
 declare let instanceOfClassB: ClassB;
+declare let instanceOfClassC: ClassC;

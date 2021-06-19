@@ -7,7 +7,7 @@
 /*
 
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+git add . && git commit -m "calling a class which doesn't implement the interface" && clear
 
 
 
@@ -37,8 +37,16 @@ class ClassB implements IPrint {
   }
 }
 
+class ClassC {
+  print(): void {
+    console.log(`classC.print() called!`);
+  }
+}
+
 let instanceOfClassA = new ClassA();
 let instanceOfClassB = new ClassB();
+let instanceOfClassC = new ClassC();
 
 printClass(instanceOfClassA);
 printClass(instanceOfClassB);
+printClass(instanceOfClassC);
