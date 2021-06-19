@@ -3,8 +3,13 @@
  * Mastering typeScript
  * INTERFACES , CLASSES, INHERITANCE AND MODULES
  */
-declare class SimpleClass {
-    id: number | undefined;
+interface IPrint {
     print(): void;
 }
-declare const myClass: SimpleClass;
+declare function printClass(a: IPrint): void;
+declare class ClassA implements IPrint {
+    print(): void;
+}
+declare class ClassB implements IPrint {
+    print(): void;
+}

@@ -4,25 +4,22 @@
  * Mastering typeScript
  * INTERFACES , CLASSES, INHERITANCE AND MODULES
  */
-/*
-
-git add . && git commit -m " " && clear
-
-
-
-
-
-
-*/
-var SimpleClass = /** @class */ (function () {
-    function SimpleClass() {
+function printClass(a) {
+    a.print();
+}
+var ClassA = /** @class */ (function () {
+    function ClassA() {
     }
-    SimpleClass.prototype.print = function () {
-        console.log("SimpleClass.id = " + this.id);
+    ClassA.prototype.print = function () {
+        console.log("classA.print() called!");
     };
-    return SimpleClass;
+    return ClassA;
 }());
-var myClass = new SimpleClass();
-myClass.id = 3;
-myClass.print();
-console.log(myClass.id);
+var ClassB = /** @class */ (function () {
+    function ClassB() {
+    }
+    ClassB.prototype.print = function () {
+        console.log("classB.print() called!");
+    };
+    return ClassB;
+}());

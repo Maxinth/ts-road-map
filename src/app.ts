@@ -7,6 +7,9 @@
 /*
 
 git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+
 
 
 
@@ -15,14 +18,21 @@ git add . && git commit -m " " && clear
 
 */
 
-class SimpleClass {
-  id: number | undefined;
+interface IPrint {
+  print(): void;
+}
+
+function printClass(a: IPrint) {
+  a.print();
+}
+class ClassA implements IPrint {
   print(): void {
-    console.log(`SimpleClass.id = ${this.id}`);
+    console.log(`classA.print() called!`);
   }
 }
 
-const myClass = new SimpleClass();
-myClass.id = 3;
-myClass.print();
-console.log(myClass.id);
+class ClassB implements IPrint {
+  print(): void {
+    console.log(`classB.print() called!`);
+  }
+}
