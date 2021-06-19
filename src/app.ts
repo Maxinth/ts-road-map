@@ -7,7 +7,7 @@
 /*
 
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
@@ -16,9 +16,9 @@ git add . && git commit -m " " && clear
 */
 
 class SimpleClass {
-  id: number = 73;
+  id: number | undefined;
   print(): void {
-    console.log(`SimpleClass.print()  called!`);
+    console.log(`SimpleClass.id = ${this.id}`);
   }
 }
 
