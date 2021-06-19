@@ -4,15 +4,10 @@
  * Mastering typeScript
  * INTERFACES , CLASSES, INHERITANCE AND MODULES
  */
-/*
-
-git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
-
-
-
-
-*/
+var idObject = {
+    id: 2
+};
+var optionalIdName = {
+    id: 2,
+    name: "opitonal name"
+};

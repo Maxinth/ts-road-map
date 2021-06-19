@@ -8,7 +8,7 @@
 
 git add . && git commit -m " " && clear
 
-git add . && git commit -m " " && clear
+
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 
@@ -17,11 +17,16 @@ git add . && git commit -m " " && clear
 
 */
 
-interface IidName {
+interface IOptional {
   id: number;
-  name: string;
+  name?: string;
 }
 
-let idObject: IidName = {
+let idObject: IOptional = {
   id: 2,
+};
+
+let optionalIdName: IOptional = {
+  id: 2,
+  name: "opitonal name",
 };
