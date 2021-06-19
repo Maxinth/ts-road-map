@@ -9,7 +9,7 @@
 git add . && git commit -m " " && clear
 
 
-git add . && git commit -m " " && clear
+
 git add . && git commit -m " " && clear
 
 
@@ -17,16 +17,11 @@ git add . && git commit -m " " && clear
 
 */
 
-interface IOptional {
-  id: number;
+interface IWeakType {
+  id?: number;
   name?: string;
 }
 
-let idObject: IOptional = {
-  id: 2,
-};
-
-let optionalIdName: IOptional = {
-  id: 2,
-  name: "opitonal name",
+let weakTypeNoOverLap: IWeakType = {
+  description: "a description",
 };
