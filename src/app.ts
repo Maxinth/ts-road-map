@@ -8,7 +8,7 @@
 
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
@@ -36,3 +36,9 @@ class ClassB implements IPrint {
     console.log(`classB.print() called!`);
   }
 }
+
+let instanceOfClassA = new ClassA();
+let instanceOfClassB = new ClassB();
+
+printClass(instanceOfClassA);
+printClass(instanceOfClassB);

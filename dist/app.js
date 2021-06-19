@@ -23,3 +23,7 @@ var ClassB = /** @class */ (function () {
     };
     return ClassB;
 }());
+var instanceOfClassA = new ClassA();
+var instanceOfClassB = new ClassB();
+printClass(instanceOfClassA);
+printClass(instanceOfClassB);
