@@ -4,7 +4,8 @@
  * INTERFACES , CLASSES, INHERITANCE AND MODULES
  */
 declare class ClassWithPrivateProperty {
-    id: number;
+    #private;
     constructor(id: number);
+    printId(): void;
 }
-declare let publicAccess: ClassWithPrivateProperty;
+declare let es6PrivateClass: ClassWithPrivateProperty;
