@@ -10,16 +10,17 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 */
 
-class ClassWithCtorMods {
-  constructor(public id: number, private name: string) {}
+class ClassWithReadonly {
+  readonly name: string;
+  constructor(_name: string) {
+    this.name = _name;
+  }
+  setNameValue(_name: string) {
+    this.name = _name;
+  }
 }
-
-let myClassMod = new ClassWithCtorMods(1, "test");
-console.log(`myClassMod.id = ${myClassMod.id}`);
-// name is private within the class and os isn't accessible outside the class
-console.log(`myClassMod.name = ${myClassMod.name}`);
