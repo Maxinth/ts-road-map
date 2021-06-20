@@ -3,9 +3,9 @@
  * Mastering typeScript
  * INTERFACES , CLASSES, INHERITANCE AND MODULES
  */
-declare class ClassWithPrivateProperty {
-    #private;
-    constructor(id: number);
-    printId(): void;
+declare class ClassWithCtorMods {
+    id: number;
+    private name;
+    constructor(id: number, name: string);
 }
-declare let es6PrivateClass: ClassWithPrivateProperty;
+declare let myClassMod: ClassWithCtorMods;

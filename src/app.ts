@@ -7,27 +7,19 @@
 /*
 
 git add . && git commit -m " " && clear
-
-
-
-
-
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
 
 
 */
 
-class ClassWithPrivateProperty {
-  #id: number;
-  constructor(id: number) {
-    this.#id = id;
-  }
-
-  printId(): void {
-    console.log(`id passed in = ${this.#id}`);
-  }
+class ClassWithCtorMods {
+  constructor(public id: number, private name: string) {}
 }
 
-let es6PrivateClass = new ClassWithPrivateProperty(100);
-
-// id which is not modified as private isn't accessible outside the ClassWithPrivateProperty class
-es6PrivateClass.printId();
+let myClassMod = new ClassWithCtorMods(1, "test");
+console.log(`myClassMod.id = ${myClassMod.id}`);
+// name is private within the class and os isn't accessible outside the class
+console.log(`myClassMod.name = ${myClassMod.name}`);
