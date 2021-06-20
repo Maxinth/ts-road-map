@@ -5,6 +5,6 @@
  */
 declare class ClassWithConstructor {
     id: number;
-    constructor(_id: number);
+    constructor(id: number);
 }
 declare let cwcInstance: ClassWithConstructor;
