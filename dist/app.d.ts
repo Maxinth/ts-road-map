@@ -3,19 +3,8 @@
  * Mastering typeScript
  * INTERFACES , CLASSES, INHERITANCE AND MODULES
  */
-interface IPrint {
-    print(): void;
+declare class ClassWithConstructor {
+    id: number;
+    constructor(_id: number);
 }
-declare function printClass(a: IPrint): void;
-declare class ClassA implements IPrint {
-    print(): void;
-}
-declare class ClassB implements IPrint {
-    print(): void;
-}
-declare class ClassC {
-    print(): void;
-}
-declare let instanceOfClassA: ClassA;
-declare let instanceOfClassB: ClassB;
-declare let instanceOfClassC: ClassC;
+declare let cwcInstance: ClassWithConstructor;

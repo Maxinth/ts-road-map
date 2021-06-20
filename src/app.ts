@@ -7,46 +7,23 @@
 /*
 
 git add . && git commit -m " " && clear
-git add . && git commit -m "calling a class which doesn't implement the interface" && clear
-
-
-
-
-
-
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
 
 
 */
 
-interface IPrint {
-  print(): void;
-}
-
-function printClass(a: IPrint) {
-  a.print();
-}
-class ClassA implements IPrint {
-  print(): void {
-    console.log(`classA.print() called!`);
+class ClassWithConstructor {
+  id: number;
+  constructor(_id: number) {
+    this.id = _id;
   }
 }
 
-class ClassB implements IPrint {
-  print(): void {
-    console.log(`classB.print() called!`);
-  }
-}
+let cwcInstance = new ClassWithConstructor(10);
 
-class ClassC {
-  print(): void {
-    console.log(`classC.print() called!`);
-  }
-}
-
-let instanceOfClassA = new ClassA();
-let instanceOfClassB = new ClassB();
-let instanceOfClassC = new ClassC();
-
-printClass(instanceOfClassA);
-printClass(instanceOfClassB);
-printClass(instanceOfClassC);
+console.log(`cwcInstance = ${JSON.stringify(cwcInstance)}`);
+console.log(cwcInstance);
