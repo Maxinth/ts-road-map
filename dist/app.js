@@ -10,16 +10,16 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
 */
-var ClassWithConstructor = /** @class */ (function () {
-    function ClassWithConstructor(id) {
-        this.id = id;
+var ClassWithPublicProperty = /** @class */ (function () {
+    function ClassWithPublicProperty() {
     }
-    return ClassWithConstructor;
+    return ClassWithPublicProperty;
 }());
-var cwcInstance = new ClassWithConstructor(10);
-console.log("cwcInstance = " + JSON.stringify(cwcInstance));
+var publicAccess = new ClassWithPublicProperty();
+publicAccess.id = 10;
+console.log(publicAccess.id);

@@ -3,8 +3,7 @@
  * Mastering typeScript
  * INTERFACES , CLASSES, INHERITANCE AND MODULES
  */
-declare class ClassWithConstructor {
-    id: number;
-    constructor(id: number);
+declare class ClassWithPublicProperty {
+    id: number | undefined;
 }
-declare let cwcInstance: ClassWithConstructor;
+declare let publicAccess: ClassWithPublicProperty;
