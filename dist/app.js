@@ -9,17 +9,19 @@
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
 
 */
-var ClassWithPublicProperty = /** @class */ (function () {
-    function ClassWithPublicProperty() {
+var ClassWithPrivateProperty = /** @class */ (function () {
+    function ClassWithPrivateProperty(id) {
+        this.id = id;
     }
-    return ClassWithPublicProperty;
+    return ClassWithPrivateProperty;
 }());
-var publicAccess = new ClassWithPublicProperty();
+var publicAccess = new ClassWithPrivateProperty(100);
+// id which is not modified as private isn't accessible outside the ClassWithPrivateProperty class
 publicAccess.id = 10;
 console.log(publicAccess.id);

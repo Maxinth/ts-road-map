@@ -8,7 +8,7 @@
 
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
@@ -17,14 +17,14 @@ git add . && git commit -m " " && clear
 */
 
 class ClassWithPrivateProperty {
-  private id: number;
+  #id: number;
   constructor(id: number) {
-    this.id = id;
+    this.#id = id;
   }
 }
 
-let publicAccess = new ClassWithPrivateProperty(100);
+let es6PrivateClass = new ClassWithPrivateProperty(100);
 
 // id which is not modified as private isn't accessible outside the ClassWithPrivateProperty class
-publicAccess.id = 10;
-console.log(publicAccess.id);
+es6PrivateClass.#id = 10;
+console.log(es6PrivateClass.#id);
