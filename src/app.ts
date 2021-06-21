@@ -11,7 +11,6 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
 
 
 
@@ -28,6 +27,3 @@ class StaticProperty {
 
 let firstInstance = new StaticProperty();
 let secondInstance = new StaticProperty();
-
-firstInstance.updateCount();
-secondInstance.updateCount();
