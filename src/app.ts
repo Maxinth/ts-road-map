@@ -8,19 +8,23 @@
 
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+
 
 
 
 */
 
-class StaticFunction {
-  static printTwo() {
-    console.log("2");
+class StaticProperty {
+  static count = 0;
+  updateCount() {
+    StaticProperty.count++;
   }
 }
 
-StaticFunction.printTwo();
-
-// this fails as printTwo being a static function can only be accessed via line 22
-let classInstance = new StaticFunction();
-classInstance.printTwo();
+let firstInstance = new StaticProperty();
+let secondInstance = new StaticProperty();

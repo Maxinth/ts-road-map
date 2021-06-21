@@ -9,14 +9,20 @@
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+
 
 
 
 */
-class StaticFunction {
-    static printTwo() {
-        console.log("2");
+class StaticProperty {
+    updateCount() {
+        StaticProperty.count++;
     }
 }
-StaticFunction.printTwo();
-let classInstance = new StaticFunction();
+StaticProperty.count = 0;
+let firstInstance = new StaticProperty();
+let secondInstance = new StaticProperty();

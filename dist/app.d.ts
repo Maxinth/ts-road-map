@@ -3,7 +3,9 @@
  * Mastering typeScript
  * INTERFACES , CLASSES, INHERITANCE AND MODULES
  */
-declare class StaticFunction {
-    static printTwo(): void;
+declare class StaticProperty {
+    static count: number;
+    updateCount(): void;
 }
-declare let classInstance: StaticFunction;
+declare let firstInstance: StaticProperty;
+declare let secondInstance: StaticProperty;
