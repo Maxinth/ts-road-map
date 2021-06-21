@@ -8,7 +8,6 @@
 
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
 
 
 
@@ -21,3 +20,7 @@ class StaticFunction {
 }
 
 StaticFunction.printTwo();
+
+// this fails as printTwo being a static function can only be accessed via line 22
+let classInstance = new StaticFunction();
+classInstance.printTwo();

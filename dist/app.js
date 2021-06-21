@@ -19,3 +19,4 @@ class StaticFunction {
     }
 }
 StaticFunction.printTwo();
+let classInstance = new StaticFunction();
