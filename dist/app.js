@@ -10,7 +10,7 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 */
 class ClassWithAccessors {
@@ -27,3 +27,6 @@ class ClassWithAccessors {
         this._id = value;
     }
 }
+let ClassInstance = new ClassWithAccessors();
+ClassInstance.id = 10;
+console.log(`classWithAccessor.id = ${ClassInstance.id}`);

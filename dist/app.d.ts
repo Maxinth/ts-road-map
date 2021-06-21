@@ -8,3 +8,4 @@ declare class ClassWithAccessors {
     get id(): number;
     set id(value: number);
 }
+declare let ClassInstance: ClassWithAccessors;
