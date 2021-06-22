@@ -8,12 +8,4 @@
 
 git add . && git commit -m " " && clear
 
-
-
-
-
-
-
-
-
 */
