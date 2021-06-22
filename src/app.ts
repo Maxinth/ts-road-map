@@ -10,7 +10,7 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 */
@@ -36,4 +36,5 @@ from base has
 */
 class IdNameClass implements IDerivedFromBase {
   name: string = "nameString";
+  id: number = 0;
 }
