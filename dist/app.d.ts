@@ -3,4 +3,4 @@
  * Mastering typeScript
  * GENERICS
  */
-declare function printGeneric<T>(value: T): void;
+declare function usingTwoTypes<A, B>(first: A, second: B): void;
