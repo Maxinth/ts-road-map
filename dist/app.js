@@ -8,21 +8,28 @@
 
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-
-
-
-
-
-
-
-
-
-
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
+git add . && git commit -m " " && clear
 
 
 */
-function usingTwoTypes(first, second) { }
-usingTwoTypes(1, "test");
-usingTwoTypes(1, "test");
-usingTwoTypes(true, false);
-usingTwoTypes("both", "strings");
+class Concatenator {
+    concatenateArray(items) {
+        let returnString = "";
+        for (let i = 0; i < items.length; i++) {
+            returnString += i > 0 ? "," : "";
+            returnString += items[i].toString();
+        }
+        return returnString;
+    }
+}

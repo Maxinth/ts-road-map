@@ -3,4 +3,6 @@
  * Mastering typeScript
  * GENERICS
  */
-declare function usingTwoTypes<A, B>(first: A, second: B): void;
+declare class Concatenator<T extends Array<string> | Array<number>> {
+    concatenateArray(items: T): string;
+}
