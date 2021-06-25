@@ -1,5 +1,6 @@
 /**
  *
  * Mastering typeScript
- * INTERFACES , CLASSES, INHERITANCE AND MODULES
+ * GENERICS
  */
+declare function printGeneric<T>(value: T): void;
