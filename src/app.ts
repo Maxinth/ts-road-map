@@ -7,7 +7,7 @@
 /*
 
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
@@ -32,10 +32,12 @@ class Concatenator<T extends Array<string> | Array<number>> {
   }
 }
 
-let concator = new Concatenator();
+// let concator = new Concatenator();
 
-let concatResult = concator.concatenateArray(["first", "second", "third"]);
-console.log(`concatResult = ${concatResult}`);
+// let concatResult = concator.concatenateArray(["first", "second", "third"]);
+// console.log(`concatResult = ${concatResult}`);
 
-concatResult = concator.concatenateArray([1000, 200, 3000]);
-console.log(`concatResult = ${concatResult}`);
+// concatResult = concator.concatenateArray([1000, 200, 3000]);
+// console.log(`concatResult = ${concatResult}`);
+
+// console.log("new ");
