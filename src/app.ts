@@ -12,7 +12,7 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
@@ -21,6 +21,7 @@ git add . && git commit -m " " && clear
 
 
 */
+
 class Concatenator<T extends Array<string> | Array<number>> {
   public concatenateArray(items: T): string {
     let returnString = "";
