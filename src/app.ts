@@ -11,7 +11,7 @@ git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
 git add . && git commit -m " " && clear
-git add . && git commit -m " " && clear
+
 
 
 
@@ -39,3 +39,5 @@ console.log(`concatResult = ${concatResult}`);
 
 concatResult = concator.concatenateArray([1000, 200, 3000]);
 console.log(`concatResult = ${concatResult}`);
+
+console.log("third go");
