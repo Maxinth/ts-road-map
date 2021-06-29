@@ -40,4 +40,4 @@ console.log(`concatResult = ${concatResult}`);
 concatResult = concator.concatenateArray([1000, 200, 3000]);
 console.log(`concatResult = ${concatResult}`);
 
-console.log("new ");
+console.log("dummy logs ");
